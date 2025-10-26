@@ -34,11 +34,13 @@ jobs:
           key: ${{ github.ref }}
           path: .cache
 
-      - name: 安装 MkDocs Material
+      - name: 安装 MkDocs 及插件
         run: |
           pip install mkdocs-material
           pip install mkdocs-minify-plugin
           pip install mkdocs-git-revision-date-localized-plugin
+          pip install mkdocs-git-committers-plugin-2
+          pip install pillow cairosvg
 
       - name: 部署到 GitHub Pages
         run: mkdocs gh-deploy --force

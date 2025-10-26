@@ -38,6 +38,8 @@ theme:
     - navigation.top            # 返回顶部按钮
     - navigation.tracking       # 地址栏自动更新
     - navigation.footer         # 页脚导航（上一页/下一页）
+    - navigation.path           # 显示面包屑导航
+    - navigation.prune          # 只渲染可见导航项（性能优化）
     
     # 右侧目录功能
     - toc.follow                # 目录跟随滚动
@@ -51,9 +53,13 @@ theme:
     # 内容功能
     - content.code.copy         # 代码复制按钮
     - content.code.annotate     # 代码注释
+    - content.code.select       # 代码选择
     - content.tabs.link         # 内容标签链接
-    - content.action.edit       # 编辑此页按钮
-    - content.action.view       # 查看源文件按钮
+    - content.tooltips          # 改进的工具提示
+    - content.footnote.tooltips # 脚注工具提示
+    
+    # 高级功能
+    - announce.dismiss          # 可关闭的公告栏
   icon:
     repo: fontawesome/brands/github
 
@@ -83,9 +89,14 @@ markdown_extensions:
   - def_list                    # 定义列表
   - footnotes                   # 脚注
   - md_in_html                  # HTML 中的 Markdown
+  - tables                      # 表格
   - toc:                        # 目录
       permalink: true
+      permalink_title: 链接到此标题
       toc_depth: 3
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   
   # Python Markdown Extensions
   - pymdownx.arithmatex:        # 数学公式
@@ -115,8 +126,16 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:            # 选项卡
       alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - pymdownx.tasklist:          # 任务列表
       custom_checkbox: true
+      clickable_checkbox: false
+  - pymdownx.snippets:          # 代码片段
+      auto_append:
+        - includes/abbreviations.md
 
 # 插件
 plugins:
@@ -125,20 +144,42 @@ plugins:
       lang:
         - zh
         - en
-  - tags                        # 标签
+  
+  - tags:                       # 标签系统
+      tags_file: tags.md        # 标签索引页
+  
+  - git-revision-date-localized: # 文章更新时间
+      enable_creation_date: true
+      type: datetime
+      timezone: Asia/Shanghai
+      locale: zh
+      fallback_to_build_date: true
+  
+  - git-committers:             # 文章贡献者
+      repository: zhangzimingmmz/OpenTheDoor
+      branch: main
+      enabled: !ENV [CI, false]
 
 # 额外配置
 extra:
+  # 社交链接
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/zhangzimingmmz
-      name: GitHub
+      name: GitHub 个人主页
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:your-email@example.com
+      name: 邮件联系
+  
   generator: false              # 隐藏 "Made with Material for MkDocs"
   
   # 版权信息
-  copyright: Copyright &copy; 2025 OpenTheDoor
+  copyright: >
+    Copyright &copy; 2025 <a href="https://github.com/zhangzimingmmz" target="_blank">OpenTheDoor</a> · 
+    <a href="#__consent">Cookie 设置</a> · 
+    <a href="https://github.com/zhangzimingmmz/OpenTheDoor/blob/main/LICENSE" target="_blank">MIT License</a>
   
-  # 文章元数据
+  # 文章反馈
   analytics:
     feedback:
       title: 这篇文章对你有帮助吗？
@@ -147,12 +188,30 @@ extra:
           name: 很有帮助
           data: 1
           note: >-
-            感谢你的反馈！
+            感谢你的反馈！🎉 如果有任何建议，欢迎<a href="https://github.com/zhangzimingmmz/OpenTheDoor/issues" target="_blank">提交 Issue</a>
         - icon: material/emoticon-sad-outline
           name: 需要改进
           data: 0
           note: >-
-            感谢你的反馈！我们会持续改进。
+            感谢你的反馈！我们会持续改进。📝 欢迎<a href="https://github.com/zhangzimingmmz/OpenTheDoor/issues" target="_blank">告诉我们</a>如何改进
+  
+  # 状态标识
+  status:
+    new: 最近添加
+    deprecated: 已废弃
+  
+  # 版本控制
+  version:
+    provider: mike
+    default: latest
+  
+  # SEO 和社交媒体卡片
+  tags:
+    Java: java
+    Spring: spring
+    认证授权: auth
+    DevOps: devops
+    云原生: cloud-native
 
 # 额外 CSS
 extra_css:

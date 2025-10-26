@@ -1,128 +1,256 @@
-# OpenTheDoor 技术知识库
+# 🚀 OpenTheDoor 技术成长之路
 
-<div align="center">
+<div align="center" style="margin: 2rem 0;">
 
-**📖 系统性学习 · 持续积累 · 夯实基础 · 面向实战**
+### 从中级工程师到资深架构师的系统化修炼
 
-*这是一个长期维护的技术学习笔记库，记录技术成长的每一步*
+**📖 原理优先 · 📝 实战驱动 · 🎯 系统成长 · 💡 架构思维**
+
+---
+
+*7年 Java 开发者的技术修炼笔记 | 补齐短板 · 提升竞争力*
 
 </div>
 
 ---
 
-## 💡 关于这个知识库
+## 🎯 成长路线图
 
-### 创建初衷
-- 🎯 **系统化学习** - 告别碎片化，构建完整的知识体系
-- 📝 **深度理解** - 不只记录 API，更要理解背后的原理  
-- 💼 **面向实战** - 结合真实项目经验和面试高频问题
-- 🔄 **持续积累** - 学习是一个长期过程，记录每一步成长
+```mermaid
+graph LR
+    A[中级工程师] --> B[高级工程师]
+    B --> C[技术专家]
+    C --> D[资深架构师]
+    
+    A --> E[扎实基础<br/>核心原理]
+    B --> F[深度实战<br/>架构能力]
+    C --> G[技术广度<br/>系统思维]
+    D --> H[团队影响<br/>技术决策]
+```
 
-### 学习方法
-每个知识点按照 **"概念 → 原理 → 实践 → 总结"** 的路径深入学习：
-
-| 内容 | 说明 |
-|------|------|
-| ✅ 详细注释 | 中英文双语注释，便于理解和记忆 |
-| ✅ 完整代码 | 可直接运行的代码示例，不是代码片段 |
-| ✅ 实战场景 | 结合真实项目场景和业务需求 |
-| ✅ 面试要点 | 标注高频面试问题和标准回答 |
-
----
-
-## 📚 知识体系导航
-
-### 🔐 一、认证授权 <span style="color: #4CAF50; font-size: 0.8em;">● 已完成</span>
-
-> 深入学习 Web 应用认证授权的核心概念、主流协议和 Spring Security 实战
-
-#### 📖 基础理论
-- [认证授权基础](auth/01-认证授权基础.md) - 核心概念、认证方式、授权模型（RBAC/ABAC）
-- [认证协议与标准](auth/02-认证协议与标准.md) - OAuth 2.0、OpenID Connect、SAML、JWT
-- [Java认证框架对比](auth/03-Java认证框架对比.md) - Spring Security vs Shiro 技术选型
-
-#### 🏗️ Spring Security 深入
-- [核心架构](auth/04-SpringSecurity核心架构.md) - 架构设计、核心组件、认证授权流程
-- [实战配置](auth/05-SpringSecurity实战配置.md) - 配置方式、自定义扩展、最佳实践
-- [OAuth2 整合](auth/06-SpringSecurity-OAuth2.md) - OAuth2 整合、授权服务器、资源服务器
-
-#### 💻 实践与进阶
-- [代码示例集](auth/07-代码示例集.md) - 完整可运行的示例代码（JWT、OAuth2、RBAC）
-- [高级主题与最佳实践](auth/08-高级主题与最佳实践.md) - 安全加固、性能优化、生产环境实践
-
-**🎯 学习收获**：掌握企业级认证授权解决方案，熟练使用 Spring Security 构建安全系统
+### 🔄 当前定位
+- **起点**：8年 Java开发经验，熟悉 Docker 和云原生
+- **短板**：编程基础能力待提升，缺少系统化知识体系
+- **目标**：补齐基础短板 → 建立架构思维 → 成为技术专家
 
 ---
 
-### 🛠️ 二、DevOps 与工具 <span style="color: #2196F3; font-size: 0.8em;">● 更新中</span>
+## 📊 能力矩阵与学习规划
 
-> 记录开发工具使用、部署运维、自动化流程等实践经验
+### 🎨 技能象限分析
 
-#### 📦 博客与文档
-- [MkDocs + GitHub Pages 搭建技术博客](devops/01-博客搭建指南.md) - 从零到上线的完整教程
+<table>
+<tr>
+<th width="50%">⭐ 重要且紧急（优先级：P0）</th>
+<th width="50%">⭐⭐ 重要但不紧急（优先级：P1）</th>
+</tr>
+<tr>
+<td valign="top">
 
-#### 🔮 计划中
-- Docker 容器化实践
-- GitHub Actions CI/CD 进阶
-- Nginx 配置与优化
+**补齐基础短板**
+- ☕ Java 核心基础
+- 🔐 安全与认证
+- 🗄️ 数据库优化
+- 📈 并发编程
 
-**🎯 学习收获**：掌握现代化开发工具链，提升开发效率和部署能力
+*目标：3-6个月内掌握*
+
+</td>
+<td valign="top">
+
+**建立架构思维**
+- 🏗️ 系统设计
+- 🌱 Spring 源码
+- ☁️ 云原生深入
+- 📊 性能优化
+
+*目标：6-12个月内精通*
+
+</td>
+</tr>
+<tr>
+<th>🔹 紧急但不重要（优先级：P2）</th>
+<th>🔸 不紧急不重要（长期储备）</th>
+</tr>
+<tr>
+<td valign="top">
+
+**面试准备**
+- 💼 算法刷题
+- 📝 八股文整理
+- 🎯 项目亮点提炼
+
+*目标：随时准备*
+
+</td>
+<td valign="top">
+
+**技术广度扩展**
+- 🦀 Rust/Go 等新语言
+- 🤖 AI/机器学习
+- 🎮 其他技术栈
+
+*目标：技术视野*
+
+</td>
+</tr>
+</table>
 
 ---
 
-### ☕ 三、Java 核心基础 <span style="color: #FF9800; font-size: 0.8em;">○ 计划中</span>
+## 📚 学习路径（按优先级）
 
-> 深入理解 Java 核心原理，夯实编程基础
+### 🎯 阶段一：夯实基础（P0 优先级）
 
-#### 📌 计划内容
-- **集合框架** - ArrayList、HashMap、ConcurrentHashMap 源码分析
-- **并发编程** - 线程、锁、线程池、并发工具类（AQS、CAS）
-- **JVM 原理** - 内存模型、垃圾回收、类加载、性能调优
-- **I/O 与网络** - BIO/NIO/AIO、Netty 框架
+<div class="phase-card">
+
+#### 🔐 1.1 安全与认证 <span class="status-completed">✅ 已完成</span>
+
+**为什么从这里开始？** 外包项目常见需求，立即可用于工作，且涉及多个核心概念
+
+- 📖 [认证授权基础](auth/01-认证授权基础.md) - 认证 vs 授权、Session vs Token、RBAC/ABAC
+- 🔑 [认证协议与标准](auth/02-认证协议与标准.md) - OAuth 2.0、JWT、OpenID Connect、SSO
+- ⚖️ [Java认证框架对比](auth/03-Java认证框架对比.md) - Spring Security vs Shiro 技术选型
+- 🏗️ [Spring Security 核心架构](auth/04-SpringSecurity核心架构.md) - 过滤器链、认证流程、授权机制
+- ⚙️ [Spring Security 实战配置](auth/05-SpringSecurity实战配置.md) - 配置技巧、自定义扩展
+- 🌐 [Spring Security OAuth2](auth/06-SpringSecurity-OAuth2.md) - 授权服务器、资源服务器实战
+- 💻 [代码示例集](auth/07-代码示例集.md) - JWT、OAuth2、RBAC 完整示例
+- 🚀 [高级主题与最佳实践](auth/08-高级主题与最佳实践.md) - 性能优化、安全加固
+
+**收获**：掌握企业级安全方案，能独立设计认证授权系统 → **提升到高级工程师必备能力**
 
 ---
 
-### 🌱 四、Spring 框架深入 <span style="color: #FF9800; font-size: 0.8em;">○ 计划中</span>
+#### ☕ 1.2 Java 核心基础 <span class="status-planning">📋 近期启动</span>
 
-> 理解 Spring 核心机制，掌握微服务架构
+**为什么重要？** 这是"内功"，决定了代码质量和问题排查能力的上限
 
-#### 📌 计划内容
-- **Spring Core** - IoC 容器、AOP 原理、事件机制
+**🔹 集合框架源码**
+- ArrayList vs LinkedList 性能对比与场景选择
+- HashMap 底层实现（数组+链表+红黑树）
+- ConcurrentHashMap 并发安全机制
+- 常见集合类的线程安全版本
+
+**🔹 并发编程深入**
+- Thread、Runnable、Callable 的区别与应用
+- synchronized、Lock、ReentrantLock 原理
+- AQS（AbstractQueuedSynchronizer）源码分析
+- 线程池原理与参数调优
+- volatile、CAS、ThreadLocal 深入理解
+
+**🔹 JVM 原理与调优**
+- 内存模型（堆、栈、方法区、直接内存）
+- 垃圾回收算法（标记清除、复制、标记整理）
+- 垃圾回收器对比（Serial、Parallel、CMS、G1、ZGC）
+- 类加载机制与双亲委派
+- JVM 参数调优与问题排查
+
+**收获**：理解 Java 底层原理，能解决复杂并发问题和性能瓶颈 → **从"会用"到"精通"的关键跨越**
+
+---
+
+#### 🗄️ 1.3 MySQL 深入优化 <span class="status-planning">📋 近期启动</span>
+
+**为什么优先？** 80% 的性能问题出在数据库，这是"中级→高级"的分水岭
+
+- 索引原理与优化（B+树、覆盖索引、索引失效）
+- SQL 执行计划分析（EXPLAIN 详解）
+- 事务与锁机制（MVCC、间隙锁、死锁排查）
+- 主从复制与读写分离
+- 分库分表策略
+
+**收获**：能独立优化慢SQL，设计高性能数据库方案 → **高级工程师核心竞争力**
+
+</div>
+
+---
+
+### 🚀 阶段二：深度实战（P1 优先级）
+
+<div class="phase-card">
+
+#### 🌱 2.1 Spring 框架源码 <span class="status-future">🔮 中期规划</span>
+
+**为什么学源码？** 理解框架设计思想，面试高频，架构能力的基础
+
+- **Spring Core** - IoC 容器实现、Bean 生命周期、AOP 原理
 - **Spring Boot** - 自动配置原理、Starter 开发、监控与运维
-- **Spring Cloud** - 微服务架构、服务治理、配置中心、链路追踪
+- **Spring Cloud** - 微服务架构、服务注册与发现、配置中心
+
+**收获**：能回答"为什么这样设计"，具备框架设计能力 → **技术专家的必经之路**
 
 ---
 
-### ☁️ 五、云原生技术 <span style="color: #FF9800; font-size: 0.8em;">○ 计划中</span>
+#### ☁️ 2.2 云原生实践 <span class="status-inprogress">⚡ 结合项目</span>
 
-> 掌握容器化和服务编排，构建云原生应用
+**为什么有优势？** 已有Docker经验，正在做AI算力平台项目，可以边学边用
 
-#### 📌 计划内容
-- **Docker** - 容器化原理、镜像构建、网络与存储
-- **Kubernetes** - Pod、Service、Deployment、配置管理
-- **Nomad** - 轻量级调度系统（结合当前 AI 算力平台项目）
+- **Docker 深入** - 镜像构建优化、网络模式、存储驱动
+- **Kubernetes** - Pod、Service、Deployment、StatefulSet
+- **Nomad 实战** - 轻量级调度（当前项目使用）
+- **服务网格** - Tailscale 组网方案
 
----
-
-### 🗄️ 六、数据库与中间件 <span style="color: #FF9800; font-size: 0.8em;">○ 计划中</span>
-
-> 深入理解数据存储和消息队列，优化系统性能
-
-#### 📌 计划内容
-- **MySQL** - 索引原理、查询优化、事务与锁、主从复制
-- **Redis** - 数据结构、持久化、集群、缓存设计
-- **Kafka/RabbitMQ** - 消息队列原理、高可用设计
+**收获**：成为团队云原生技术负责人 → **差异化竞争力**
 
 ---
 
-### 🏗️ 七、系统设计与架构 <span style="color: #FF9800; font-size: 0.8em;">○ 长期规划</span>
+#### 🗄️ 2.3 Redis 与缓存设计 <span class="status-future">🔮 中期规划</span>
 
-> 提升架构设计能力，应对复杂业务场景
+- 5种数据结构底层实现
+- 持久化机制（RDB vs AOF）
+- 缓存击穿、穿透、雪崩解决方案
+- Redis 集群与高可用
 
-#### 📌 计划内容
-- **微服务架构** - 服务拆分、API 网关、服务治理
+**收获**：设计高性能缓存方案 → **系统架构能力提升**
+
+</div>
+
+---
+
+### 🏗️ 阶段三：架构思维（P1-P2 优先级）
+
+<div class="phase-card">
+
+#### 🏛️ 3.1 系统设计与架构 <span class="status-future">🔮 长期目标</span>
+
+**为什么是最终目标？** 这是"高级→专家→架构师"的关键能力
+
+- **微服务架构** - 服务拆分原则、API 网关、服务治理
 - **分布式系统** - CAP/BASE 理论、分布式事务、一致性协议
-- **高并发系统** - 限流降级、缓存策略、数据库优化
+- **高并发系统** - 限流降级、消息队列、数据库优化
+- **系统重构** - 从单体到微服务的演进策略
+
+**收获**：能独立设计千万级系统架构 → **资深架构师核心能力**
+
+---
+
+#### 📊 3.2 性能优化实战 <span class="status-future">🔮 长期目标</span>
+
+- JVM 调优实战
+- 数据库性能优化
+- 接口响应时间优化
+- 系统容量规划
+
+**收获**：解决复杂性能问题 → **技术专家必备技能**
+
+</div>
+
+---
+
+### 🛠️ 工具链与效率提升
+
+<div class="phase-card">
+
+#### 🔧 DevOps 与工具 <span class="status-inprogress">⚡ 持续更新</span>
+
+- 📦 [MkDocs + GitHub Pages 搭建技术博客](devops/01-博客搭建指南.md) - 完整搭建教程
+- 🔄 Docker 容器化实践
+- 🚀 GitHub Actions CI/CD
+- 📈 监控与日志系统
+
+**收获**：提升开发效率，建立个人技术品牌
+
+</div>
 
 
 ---
