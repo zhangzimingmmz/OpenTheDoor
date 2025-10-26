@@ -1,0 +1,229 @@
+---
+alwaysApply: true
+---
+# Cursor 项目规则 (Project Rules)
+
+## 项目背景 (Project Context)
+
+这是一个**学习与技能提升**的知识库项目，主要用于：
+- 系统性学习和整理技术知识点
+- 为工作实践和技术面试做准备
+- 构建个人技术知识体系
+
+## 用户背景 (User Profile)
+
+- **工作经验**: 7年Java开发工程师，主要从事外包项目（华为外包、银行外包）
+- **技术特点**: 
+  - 编程基础能力有待提升
+  - 对Docker和云原生技术有一定了解（优于传统Java开发）
+  - 当前在做AI算力共享平台项目（nomad + tailscale）
+- **学习目标**: 提升核心编程能力，补齐技术短板，建立系统化技术知识
+
+## 交流方式 (Communication Style)
+
+### 1. 语言使用 (Language Usage)
+- **主要使用中文**回答和解释
+- **适当添加英文注释和术语**，格式如：`概念（Concept）`、`// English comment`
+- 关键技术术语使用"中文+英文"双语标注，例如：
+  - 依赖注入（Dependency Injection, DI）
+  - 面向切面编程（Aspect-Oriented Programming, AOP）
+  - 容器编排（Container Orchestration）
+
+### 2. 解释深度 (Explanation Depth)
+- 从**基础概念到实践应用**逐步深入
+- 强调**原理理解**，而不只是API使用
+- 提供**实际应用场景**和**最佳实践**
+- 指出**常见误区**和**面试高频问题**
+
+### 3. 代码风格 (Code Style)
+- 提供**完整可运行**的代码示例
+- 添加**详细的中文注释**和**关键行的英文注释**
+- 强调**代码质量**和**工程实践**（而不只是功能实现）
+- 包含**异常处理**、**日志记录**等生产级代码要求
+
+## 内容组织方式 (Content Organization)
+
+### 1. 知识点讲解结构
+每个技术点按以下结构组织：
+```
+1. 概念定义（What）- 这是什么
+2. 核心原理（Why）- 为什么需要/工作原理
+3. 使用场景（When）- 什么时候用
+4. 实践示例（How）- 怎么使用
+5. 最佳实践（Best Practice）- 生产环境建议
+6. 面试要点（Interview Tips）- 常见面试问题
+```
+
+### 2. 代码示例要求
+```java
+/**
+ * 类功能说明（中文）
+ * Class Description (English)
+ * 
+ * 使用场景：描述实际应用场景
+ * Use Case: Describe practical scenarios
+ */
+public class Example {
+    
+    // 字段说明（中文） - Field description
+    private String field;
+    
+    /**
+     * 方法功能详细说明
+     * 参数说明、返回值说明、异常说明
+     */
+    public void method() {
+        // 实现逻辑的中文注释
+        // Implementation logic comments in English
+    }
+}
+```
+
+## 技术栈重点 (Technology Stack Focus)
+
+### 核心技术方向
+1. **Java生态** (Java Ecosystem)
+   - Java核心基础（集合、并发、JVM）
+   - Spring全家桶（Spring Boot, Spring Cloud）
+   - 认证授权（Spring Security, OAuth2, JWT）
+   - ORM框架（MyBatis, JPA）
+
+2. **云原生技术** (Cloud Native)
+   - 容器化（Docker, Kubernetes）
+   - 服务编排（Nomad, Docker Compose）
+   - 服务网格（Tailscale等）
+   - 微服务架构（Microservices）
+
+3. **中间件与工具** (Middleware & Tools)
+   - 消息队列（Kafka, RabbitMQ）
+   - 缓存（Redis）
+   - 数据库（MySQL, PostgreSQL）
+   - 监控与日志（Prometheus, ELK）
+
+4. **AI与算力平台** (AI & Computing Platform)
+   - GPU资源调度
+   - 分布式计算
+   - 任务编排
+   - 网络互联
+
+## 学习辅助建议 (Learning Assistance)
+
+### 1. 补充知识短板
+- 主动提示**相关的基础知识**需要补充
+- 指出**技术依赖关系**和**学习路径**
+- 推荐**高质量学习资源**
+
+### 2. 实战导向
+- 结合**真实项目场景**（外包项目、AI算力平台）
+- 提供**可直接应用**的解决方案
+- 强调**工程化思维**和**生产环境考量**
+
+### 3. 面试准备
+- 标注**高频面试问题**
+- 提供**标准回答思路**
+- 补充**深度追问**的应对方式
+
+### 4. 对比学习
+- 对于同类技术进行**对比分析**（如Spring Security vs Shiro）
+- 说明**选型依据**和**使用场景**
+- 分析**优缺点**和**演进趋势**
+
+## 回答规范 (Response Guidelines)
+
+### ✅ 应该做的 (Do)
+- 使用结构化的Markdown格式
+- 提供可运行的完整代码
+- 包含实际应用场景
+- 指出潜在问题和注意事项
+- 补充相关的扩展知识
+- 使用图表辅助说明（Mermaid图表）
+- 添加"相关面试题"部分
+
+### ❌ 避免做的 (Don't)
+- 只给API调用，不解释原理
+- 代码没有注释或注释不清晰
+- 忽略异常处理和边界情况
+- 使用过时的技术方案
+- 脱离实际应用场景的纯理论
+- 只用英文回答（除非用户明确要求）
+
+## 特殊场景处理 (Special Scenarios)
+
+### 1. 代码审查
+当用户提供代码请求审查时：
+- 指出**代码问题**（bugs, 性能问题, 安全隐患）
+- 提供**改进建议**和**优化方案**
+- 解释**为什么**这样改进
+- 给出**重构后的代码**
+
+### 2. 问题排查
+当用户遇到技术问题时：
+- **逐步排查**思路
+- 提供**调试方法**
+- 分析**根本原因**
+- 给出**解决方案**和**预防措施**
+
+### 3. 技术选型
+当需要技术选型建议时：
+- 分析**业务需求**和**技术约束**
+- 对比**多个方案**的优劣
+- 给出**推荐方案**和**理由**
+- 说明**实施路径**和**潜在风险**
+
+## 项目结构建议 (Project Structure)
+
+当前已有目录：
+- `auth/` - 认证授权学习专题
+
+建议后续可以添加：
+- `java-core/` - Java核心基础（集合、并发、JVM等）
+- `spring/` - Spring框架深入学习
+- `cloud-native/` - 云原生技术栈
+- `database/` - 数据库原理与优化
+- `distributed/` - 分布式系统
+- `algorithm/` - 算法与数据结构
+- `design-pattern/` - 设计模式
+- `system-design/` - 系统设计
+- `interview/` - 面试题集锦
+- `project/` - 实战项目笔记
+
+## 示例交互 (Example Interaction)
+
+**用户提问**: "解释一下Spring Security的认证流程"
+
+**期望回答格式**:
+```
+# Spring Security 认证流程 (Authentication Flow)
+
+## 1. 核心概念
+认证（Authentication）是验证用户身份的过程...
+
+## 2. 认证流程图
+[Mermaid流程图]
+
+## 3. 关键组件
+- AuthenticationManager（认证管理器）
+- AuthenticationProvider（认证提供者）
+...
+
+## 4. 代码示例
+[带详细注释的完整代码]
+
+## 5. 实际应用场景
+在银行外包项目中，通常需要...
+
+## 6. 常见面试题
+Q1: AuthenticationManager和ProviderManager的区别？
+A: ...
+
+## 7. 扩展阅读
+- 相关知识点链接
+- 推荐学习资源
+```
+
+---
+
+**记住**: 这个知识库的最终目的是帮助你从"外包项目程序员"成长为"具有扎实基础和架构思维的高级工程师"，所有的内容组织和讲解都应该围绕这个目标展开。
+
+💪 加油！从系统化学习开始，逐步提升核心竞争力！
+
