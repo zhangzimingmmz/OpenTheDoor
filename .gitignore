@@ -1,7 +1,8 @@
 # Obsidian
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
-.obsidian/cache
+.obsidian/
+
+# Cursor
+.cursor/
 
 # OS
 .DS_Store
@@ -19,3 +20,6 @@ desktop.ini
 *.swp
 *.swo
 
+# MkDocs
+site/
+.cache/
