@@ -1,86 +1,178 @@
 # OpenTheDoor 技术知识库
 
-## 👋 欢迎
+> 📖 系统性学习 · 持续积累 · 夯实基础 · 面向实战
 
-这是一个**系统性学习与技能提升**的技术知识库，主要用于：
+## 👋 关于这个知识库
 
-- 📚 系统性学习和整理技术知识点
-- 💼 为工作实践和技术面试做准备
-- 🎯 构建个人技术知识体系
+这是一个**长期维护的技术学习笔记库**，记录了我在技术学习道路上的点滴积累。
 
-## 📖 知识库目录
+### 💡 创建初衷
+- 🎯 **系统化学习**：告别碎片化，构建完整的知识体系
+- 📝 **深度理解**：不只记录 API，更要理解背后的原理
+- 💼 **面向实战**：结合真实项目经验和面试高频问题
+- 🔄 **持续积累**：学习是一个长期过程，这里记录每一步成长
 
-### 🔐 认证授权 (Authentication & Authorization)
-
-深入学习认证授权的核心概念、主流协议标准和实战应用。
-
-- [认证授权基础](auth/01-认证授权基础.md) - 核心概念、认证方式、授权模型
-- [认证协议与标准](auth/02-认证协议与标准.md) - OAuth 2.0、OpenID Connect、SAML、JWT
-- [Java认证框架对比](auth/03-Java认证框架对比.md) - Spring Security vs Shiro vs Apache CXF
-- [SpringSecurity核心架构](auth/04-SpringSecurity核心架构.md) - 架构设计、核心组件、认证流程
-- [SpringSecurity实战配置](auth/05-SpringSecurity实战配置.md) - 配置方式、最佳实践
-- [SpringSecurity-OAuth2](auth/06-SpringSecurity-OAuth2.md) - OAuth2 整合与实现
-- [代码示例集](auth/07-代码示例集.md) - 完整可运行的示例代码
-- [高级主题与最佳实践](auth/08-高级主题与最佳实践.md) - 安全加固、性能优化、生产实践
-
-## 🎯 学习目标
-
-### 当前重点
-- ✅ 认证授权体系（进行中）
-- 🔜 Java 核心基础（计划中）
-- 🔜 Spring 框架深入（计划中）
-- 🔜 云原生技术栈（计划中）
-
-### 技术栈规划
-
-#### Java 生态
-- Java 核心基础（集合、并发、JVM）
-- Spring 全家桶（Spring Boot, Spring Cloud）
-- ORM 框架（MyBatis, JPA）
-
-#### 云原生技术
-- 容器化（Docker, Kubernetes）
-- 服务编排（Nomad, Docker Compose）
-- 微服务架构（Microservices）
-
-#### 中间件与工具
-- 消息队列（Kafka, RabbitMQ）
-- 缓存（Redis）
-- 数据库（MySQL, PostgreSQL）
-
-## 💡 特色
-
-### 📝 详细注释
-所有代码示例都包含**中英文双语注释**，便于理解和记忆。
-
-### 🎓 面向实战
-结合**真实项目场景**和**面试高频问题**，不只是理论学习。
-
-### 🔄 持续更新
-知识库会随着学习进度**持续更新**和**完善**。
-
-### 🌟 工程思维
-强调**代码质量**、**最佳实践**和**生产环境考量**。
-
-## 🚀 使用指南
-
-### 在线阅读
-访问 [GitHub Pages](https://zhangzimingmmz.github.io/OpenTheDoor/) 在线阅读。
-
-### 本地阅读
-使用 [Obsidian](https://obsidian.md/) 打开本仓库，获得最佳阅读体验。
-
-### 贡献
-欢迎提出建议和问题！可以通过 [Issues](https://github.com/zhangzimingmmz/OpenTheDoor/issues) 交流。
-
-## 📞 联系方式
-
-- GitHub: [@zhangzimingmmz](https://github.com/zhangzimingmmz)
-- 项目地址: [OpenTheDoor](https://github.com/zhangzimingmmz/OpenTheDoor)
+### 🚀 学习方法
+每个知识点都按照 **"概念 → 原理 → 实践 → 总结"** 的路径深入学习，配有：
+- ✅ 详细的中英文双语注释
+- ✅ 完整可运行的代码示例
+- ✅ 真实项目场景应用
+- ✅ 常见面试问题解析
 
 ---
 
-**💪 持续学习，不断进步！**
+## 📚 知识体系
 
-> 从系统化学习开始，逐步提升核心竞争力！
+### 🔐 认证授权专题 `NEW`
+
+**学习时间**：2025年10月  
+**完成度**：✅ 已完成核心内容
+
+深入学习 Web 应用认证授权的核心概念、主流协议标准和 Spring Security 实战应用。
+
+<details>
+<summary>📖 查看全部文章（8篇）</summary>
+
+1. [认证授权基础](auth/01-认证授权基础.md) - 核心概念、认证方式、授权模型
+2. [认证协议与标准](auth/02-认证协议与标准.md) - OAuth 2.0、OpenID Connect、SAML、JWT
+3. [Java认证框架对比](auth/03-Java认证框架对比.md) - Spring Security vs Shiro vs Apache CXF
+4. [SpringSecurity核心架构](auth/04-SpringSecurity核心架构.md) - 架构设计、核心组件、认证流程
+5. [SpringSecurity实战配置](auth/05-SpringSecurity实战配置.md) - 配置方式、最佳实践
+6. [SpringSecurity-OAuth2](auth/06-SpringSecurity-OAuth2.md) - OAuth2 整合与实现
+7. [代码示例集](auth/07-代码示例集.md) - 完整可运行的示例代码
+8. [高级主题与最佳实践](auth/08-高级主题与最佳实践.md) - 安全加固、性能优化、生产实践
+
+</details>
+
+**核心收获**：
+- ✅ 掌握认证授权的核心概念和常见模型
+- ✅ 理解 OAuth 2.0、JWT 等主流协议的工作原理
+- ✅ 熟练使用 Spring Security 构建企业级安全方案
+
+---
+
+### 📋 学习计划
+
+#### 🔥 进行中
+- 🔐 **认证授权专题** - 已完成
+
+#### 📅 近期计划
+- ☕ **Java 核心基础**
+  - 集合框架源码分析
+  - 并发编程深入（线程、锁、并发工具类）
+  - JVM 原理与调优
+  
+- 🌱 **Spring 框架深入**
+  - Spring Core（IoC、AOP、事件机制）
+  - Spring Boot 自动配置原理
+  - Spring Cloud 微服务实战
+
+#### 🎯 长期规划
+- ☁️ **云原生技术栈**
+  - Docker 容器化实践
+  - Kubernetes 服务编排
+  - Nomad 调度系统（结合当前项目）
+  
+- 🗄️ **数据库与中间件**
+  - MySQL 原理与优化
+  - Redis 深入应用
+  - Kafka/RabbitMQ 消息队列
+  
+- 🏗️ **系统设计与架构**
+  - 微服务架构设计
+  - 分布式系统理论
+  - 高并发系统设计
+
+- 📊 **算法与数据结构**
+  - LeetCode 刷题笔记
+  - 常见算法模板总结
+
+---
+
+## 💻 技术背景
+
+### 工作经验
+- 🏢 7年 Java 开发工程师（外包项目经验）
+- 🎯 当前项目：AI 算力共享平台（Nomad + Tailscale）
+
+### 技术特点
+- ☁️ 对 Docker 和云原生技术有深入理解
+- 🔧 熟悉微服务架构和分布式系统
+- 📈 正在系统性补齐核心编程能力
+
+### 学习目标
+- 🎯 **提升编程基础能力**：深入理解 Java 核心原理
+- 🏗️ **建立架构思维**：从代码到系统设计的全面提升
+- 💼 **面试准备**：补齐知识短板，提高竞争力
+- 🚀 **项目实战**：理论联系实际，解决真实问题
+
+---
+
+## 🎯 学习特色
+
+### 📝 内容质量
+- **原理优先**：不只记录 API 用法，更要理解为什么这样设计
+- **代码注释**：所有示例都有详细的中英文双语注释
+- **场景驱动**：结合真实项目场景和常见业务需求
+- **面试导向**：标注高频面试问题和标准回答思路
+
+### 🛠️ 实践导向
+- **完整代码**：提供可直接运行的完整示例，不是代码片段
+- **最佳实践**：强调生产环境的代码质量和工程化思维
+- **问题解决**：记录实际遇到的问题和解决方案
+- **持续更新**：随着理解深入不断完善和补充
+
+### 📚 知识组织
+每个主题都按照统一的结构组织：
+```
+1. 概念定义 (What) - 这是什么
+2. 核心原理 (Why) - 为什么需要/工作原理
+3. 使用场景 (When) - 什么时候用
+4. 实践示例 (How) - 怎么使用
+5. 最佳实践 (Best Practice) - 生产环境建议
+6. 面试要点 (Interview Tips) - 常见问题解析
+```
+
+---
+
+## 🚀 如何使用
+
+### 📖 在线阅读（推荐）
+访问 **[GitHub Pages](https://zhangzimingmmz.github.io/OpenTheDoor/)** 在线阅读，获得最佳体验：
+- 🎨 现代化的 Material Design 主题
+- 🔍 强大的全文搜索功能
+- 🌙 支持深色/浅色模式切换
+- 📱 响应式设计，支持移动端
+
+### 💻 本地阅读
+使用 [Obsidian](https://obsidian.md/) 打开本仓库：
+- 🔗 支持双向链接和关系图谱
+- 📝 实时预览和编辑
+- 🎯 强大的笔记管理功能
+
+### 🤝 交流与反馈
+- 💬 发现错误或有建议？欢迎提 [Issues](https://github.com/zhangzimingmmz/OpenTheDoor/issues)
+- ⭐ 觉得有帮助？给个 Star 鼓励一下
+- 🔀 想要补充内容？欢迎提 Pull Request
+
+---
+
+## 📞 关于我
+
+- 💼 7年 Java 开发工程师，关注云原生和微服务
+- 🎯 持续学习者，相信系统化积累的力量
+- 📧 GitHub: [@zhangzimingmmz](https://github.com/zhangzimingmmz)
+
+---
+
+<div align="center">
+
+**💪 每天进步一点点，持续学习，不断成长！**
+
+*"学习不是为了应付面试，而是为了成为更好的工程师"*
+
+⭐ 如果这个知识库对你有帮助，欢迎 Star 支持  
+🔄 持续更新中... | 最后更新：2025年10月
+
+</div>
 
