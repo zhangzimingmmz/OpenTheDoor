@@ -7,6 +7,17 @@ site_author: zhangzimingmmz
 repo_name: zhangzimingmmz/OpenTheDoor
 repo_url: https://github.com/zhangzimingmmz/OpenTheDoor
 
+# 文档目录
+docs_dir: .
+# 排除目录
+exclude_docs: |
+  .git/
+  .github/
+  .obsidian/
+  .cursor/
+  docs/stylesheets/
+  docs/javascripts/
+
 theme:
   name: material
   language: zh
