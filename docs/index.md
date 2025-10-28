@@ -34,16 +34,26 @@
 
 > ⭐⭐⭐⭐⭐ **面试高频** | 决定你的技术深度和代码质量
 
-<details>
-<summary><strong>📘 Java 语言基础</strong> 🔵 规划中</summary>
+<details open>
+<summary><strong>📘 Java 语言基础</strong> 🟢 已完成 | <a href="java-core/01-Java语法基础.md">📖 完整教程</a></summary>
 
 **📚 学习内容**
 
-- **语法基础** - 数据类型、运算符、控制流、异常处理
-- **面向对象** - 类与对象、继承、多态、封装、接口与抽象类
-- **高级特性** - 泛型、注解、反射、动态代理
-- **函数式编程** - Lambda、Stream API、Optional
-- **新版本特性** - Java 8~21（Record、Sealed Class、Virtual Thread）
+- **[语法基础](java-core/01-Java语法基础.md)** ✅ - 数据类型、运算符、控制流、异常处理、字符串、数组
+- **[面向对象](java-core/02-面向对象编程.md)** ✅ - 类与对象、封装、继承、多态、接口、抽象类、内部类
+- **[高级特性](java-core/03-Java高级特性.md)** ✅ - 泛型、注解、反射、动态代理、枚举、SPI机制
+- **[函数式编程](java-core/04-函数式编程.md)** ✅ - Lambda、Stream API、Optional、方法引用
+- **[新版本特性](java-core/05-Java新版本特性.md)** ✅ - Java 8~21（Record、Sealed Class、Virtual Thread）
+
+**🎯 学习目标**
+- 掌握Java核心语法和面向对象思想
+- 理解泛型、反射等高级特性的原理和应用
+- 熟练使用Lambda和Stream进行函数式编程
+- 了解Java各版本的重要新特性
+- 面试高频知识点全覆盖
+
+**📖 完整文档**
+- 📖 [Java语言基础完整导航](java-core/README.md)
 
 
 
