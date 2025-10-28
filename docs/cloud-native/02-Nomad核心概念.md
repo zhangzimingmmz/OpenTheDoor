@@ -619,19 +619,19 @@ task "app" {
 
 ---
 
-## 🎯 本章小结
+## 🎯 核心要点
 
-- ✅ 理解 Job、Task Group、Task 的层级关系
-- ✅ 掌握 Service、Batch、System 三种 Job 类型
-- ✅ 学会使用约束和亲和性控制调度
-- ✅ 了解 Allocation 和 Evaluation 的作用
-- ✅ 掌握更新策略和 Canary 部署
+- ✅ Job、Task Group、Task 的层级关系
+- ✅ Service、Batch、System 三种 Job 类型
+- ✅ 约束和亲和性控制调度
+- ✅ Allocation 和 Evaluation 的作用
+- ✅ 更新策略和 Canary 部署
 
 ---
 
-## 📚 下一步学习
+## 📚 相关文档
 
-- 🏗️ [03-Nomad实战部署](03-Nomad实战部署.md) - 搭建生产级集群
+- 🏗️ [03-Nomad实战部署](03-Nomad实战部署.md) - 生产级集群搭建
 - 🔧 [04-Nomad作业编排](04-Nomad作业编排.md) - 复杂 Job 配置
 - 🌐 [05-Nomad网络与服务发现](05-Nomad网络与服务发现.md) - 网络和 Consul 集成
 

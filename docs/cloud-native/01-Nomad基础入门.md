@@ -461,25 +461,25 @@ log_level = "DEBUG"
 
 ---
 
-## 📚 下一步学习
+## 📚 相关文档
 
 - 📖 [02-Nomad核心概念](02-Nomad核心概念.md) - 深入理解 Job、Task、Allocation
-- 🏗️ [03-Nomad实战部署](03-Nomad实战部署.md) - 搭建生产级集群
-- 🔧 [04-Nomad作业编排](04-Nomad作业编排.md) - 编写复杂的 Job 配置
+- 🏗️ [03-Nomad实战部署](03-Nomad实战部署.md) - 生产级集群搭建
+- 🔧 [04-Nomad作业编排](04-Nomad作业编排.md) - 复杂 Job 配置
 
 ---
 
-## 🎯 本章小结
+## 🎯 核心要点
 
-- ✅ 理解 Nomad 的定位和优势
-- ✅ 掌握 Nomad 的基本架构
-- ✅ 学会安装和启动 Nomad
+- ✅ Nomad 的定位和优势
+- ✅ Nomad 的基本架构
+- ✅ 安装和启动方式
 - ✅ 运行第一个 Job
-- ✅ 熟悉基本的 CLI 命令
+- ✅ 基本的 CLI 命令
 
 ---
 
-## 🔗 相关资源
+## 🔗 参考资源
 
 - [Nomad 官方文档](https://www.nomadproject.io/docs)
 - [Nomad Getting Started](https://learn.hashicorp.com/collections/nomad/get-started)
@@ -487,7 +487,7 @@ log_level = "DEBUG"
 
 ---
 
-💡 **学习提示**：建议在本地启动开发模式，跟着教程实际操作，加深理解。
+💡 **技术提示**：开发模式适合快速测试和验证，实际操作加深理解。
 
 🔄 持续更新中... | 最后更新：2025年10月
 

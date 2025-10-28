@@ -1,13 +1,13 @@
 # 🚀 OpenTheDoor - 知识库
 
 !!! abstract "核心理念"
-    **📖 原理优先 · 📝 实战驱动 · 💡 系统积累 · 🎯 终身成长**
+    **📖 原理优先 · 📝 实战驱动 · 💡 系统积累 · 🎯 持续精进**
     
-    *从基础到架构的系统化学习 | 计算机科学 + Java 生态 + 工程实践*
+    *从基础到架构的技术总结 | 计算机科学 + Java 生态 + 工程实践*
 
 ---
 
-## 📚 已完成的学习资源
+## 📚 已完成的技术总结
 
 | 专题 | 描述 | 状态 |
 |:---|:---|:---:|
@@ -26,7 +26,7 @@
 
 [:material-book-open-variant: 完整导航](java-core/README.md){ .md-button .md-button--primary }
 
-**📚 学习内容**
+**📚 核心内容**
 
 - **[语法基础](java-core/01-Java语法基础.md)** ✅ - 数据类型、运算符、控制流、异常处理、字符串、数组
 - **[面向对象](java-core/02-面向对象编程.md)** ✅ - 类与对象、封装、继承、多态、接口、抽象类、内部类
@@ -34,19 +34,19 @@
 - **[函数式编程](java-core/04-函数式编程.md)** ✅ - Lambda、Stream API、Optional、方法引用
 - **[新版本特性](java-core/05-Java新版本特性.md)** ✅ - Java 8~21（Record、Sealed Class、Virtual Thread）
 
-**🎯 学习目标**
+**🎯 核心要点**
 
-- 掌握Java核心语法和面向对象思想
-- 理解泛型、反射等高级特性的原理和应用
-- 熟练使用Lambda和Stream进行函数式编程
-- 了解Java各版本的重要新特性
-- 面试高频知识点全覆盖
+- Java核心语法和面向对象思想
+- 泛型、反射等高级特性的原理和应用
+- Lambda和Stream函数式编程
+- Java各版本的重要新特性
+- 面试高频知识点
 
 ---
 
 ### 🗂️ Java 集合框架 🔵 规划中
 
-**📚 学习内容**
+**📚 核心内容**
 
 - **List 系列** - ArrayList、LinkedList、CopyOnWriteArrayList 源码
 - **Set 系列** - HashSet、TreeSet、LinkedHashSet
@@ -54,17 +54,17 @@
 - **Queue 系列** - PriorityQueue、BlockingQueue、Deque
 - **集合工具** - Collections、Arrays、Iterator、Comparator
 
-**🎯 学习目标**
+**🎯 核心要点**
 
-- 理解各集合底层实现（数组、链表、红黑树、跳表）
-- 掌握性能特点和使用场景
-- 面试高频考点全覆盖
+- 各集合底层实现（数组、链表、红黑树、跳表）
+- 性能特点和使用场景
+- 面试高频考点
 
 ---
 
 ### 🧵 Java 并发编程 🔵 规划中
 
-**📚 学习内容**
+**📚 核心内容**
 
 - **线程基础** - Thread、Runnable、Callable、FutureTask
 - **线程安全** - synchronized、volatile、final、ThreadLocal
@@ -75,7 +75,7 @@
 - **并发容器** - ConcurrentHashMap、BlockingQueue
 - **虚拟线程** - Java 21 Virtual Threads
 
-**🎯 学习目标**
+**🎯 核心要点**
 
 - 深入理解 Java 内存模型（JMM）
 - 掌握并发编程最佳实践
@@ -85,7 +85,7 @@
 
 ### 🔧 JVM 虚拟机 🔵 规划中
 
-**📚 学习内容**
+**📚 核心内容**
 
 - **JVM 体系结构** - 类加载、运行时数据区、执行引擎
 - **类加载机制** - 加载、链接、初始化、双亲委派模型
@@ -94,7 +94,7 @@
 - **JVM 调优** - 参数配置、内存调优、GC 调优
 - **性能监控** - JConsole、VisualVM、Arthas
 
-**🎯 学习目标**
+**🎯 核心要点**
 
 - 深入理解 JVM 运行机制
 - 掌握 JVM 调优技能
@@ -106,7 +106,7 @@
 
 [:material-book-open-variant: 认证授权教程](auth/01-认证授权基础.md){ .md-button }
 
-**📚 学习内容**
+**📚 核心内容**
 
 **Spring Core**
 
@@ -129,7 +129,7 @@
 
 - MyBatis、MyBatis-Plus、Hibernate/JPA
 
-**🎯 学习目标**
+**🎯 核心要点**
 
 - 深入理解 Spring 源码和设计模式
 - 掌握微服务架构开发
@@ -280,13 +280,13 @@ JVM 调优、数据库调优、应用调优、高并发方案（限流、降级�
 [:material-book-open-variant: Nomad 完整教程](cloud-native/README.md){ .md-button .md-button--primary }
 [:material-link: Tailscale 集成](cloud-native/07-Nomad与Tailscale集成.md){ .md-button }
 
-**📚 学习内容**
+**📚 核心内容**
 
 - **[Nomad 基础入门](cloud-native/01-Nomad基础入门.md)** ✅ - 架构、安装、快速开始
 - **[Nomad 核心概念](cloud-native/02-Nomad核心概念.md)** ✅ - Job、Task、Allocation、Driver
 - **[Nomad 与 Tailscale 集成](cloud-native/07-Nomad与Tailscale集成.md)** ✅ - 跨云互联、AI 算力平台实战
 
-**🎯 学习目标**
+**🎯 核心要点**
 
 - 掌握轻量级容器编排工具 Nomad
 - 理解跨云、跨数据中心的资源调度
@@ -320,14 +320,14 @@ Pod、Service、Deployment、ConfigMap、网络、存储、调度、高可用
 
 ---
 
-## 📊 学习统计
+## 📊 内容统计
 
 | 📈 维度 | 📊 数据 |
 |:---:|:---|
 | **知识模块** | 14 大类 70+ 小类 |
-| **已完成** | Java语言基础、认证授权、博客搭建 |
+| **已完成** | Java语言基础、认证授权、Nomad、博客搭建 |
 | **进行中** | Spring、容器技术、云原生工具 |
-| **总文档** | 15+ 篇，持续增加中 |
+| **总文档** | 20+ 篇，持续增加中 |
 
 ---
 
@@ -340,11 +340,11 @@ Pod、Service、Deployment、ConfigMap、网络、存储、调度、高可用
 - 📈 从外包到技术专家的成长之路
 - 💪 相信系统化积累的力量
 
-**当前状态**
+**技术方向**
 
 - ☕ 擅长：Java 生态系统、Docker & Kubernetes、微服务架构
 - 🖥️ 项目：AI 算力共享平台、Nomad + Tailscale 实践
-- 📚 学习：补齐编程基础、建立架构思维、提升系统设计能力
+- 📚 方向：编程基础、架构思维、系统设计
 
 **联系方式**
 
@@ -353,8 +353,8 @@ Pod、Service、Deployment、ConfigMap、网络、存储、调度、高可用
 
 ---
 
-!!! quote "💡 成长寄语"
-    **"学习不是为了应付面试，而是为了成为更好的工程师"**
+!!! quote "💡 技术理念"
+    **"总结不是为了应付面试，而是为了系统化沉淀技术经验"**
 
     ⭐ 如果这个知识库对你有帮助，欢迎 Star 支持  
         
