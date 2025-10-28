@@ -9,7 +9,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/zhangzimingmmz/OpenTheDoor?style=flat-square)](https://github.com/zhangzimingmmz/OpenTheDoor)
 [![GitHub forks](https://img.shields.io/github/forks/zhangzimingmmz/OpenTheDoor?style=flat-square)](https://github.com/zhangzimingmmz/OpenTheDoor/fork)
 
-
+</div>
 
 ---
 
@@ -19,6 +19,7 @@
 
 | 专题 | 描述 | 状态 |
 |:---|:---|:---:|
+| **[☕ Java 语言基础](java-core/README.md)** | Java 核心语法、面向对象、泛型、反射、函数式编程 | ✅ 已完成 |
 | **[🔐 认证授权](auth/01-认证授权基础.md)** | Spring Security、OAuth2、JWT、SSO 完整教程 | ✅ 已完成 |
 | **[📝 博客搭建](devops/01-博客搭建指南.md)** | MkDocs + GitHub Pages 搭建技术博客 | ✅ 已完成 |
 
@@ -35,7 +36,7 @@
 > ⭐⭐⭐⭐⭐ **面试高频** | 决定你的技术深度和代码质量
 
 <details open>
-<summary><strong>📘 Java 语言基础</strong> 🟢 已完成 | <a href="java-core/01-Java语法基础.md">📖 完整教程</a></summary>
+<summary><strong>📘 Java 语言基础</strong> 🟢 已完成 | <a href="java-core/README.md">📖 完整导航</a></summary>
 
 **📚 学习内容**
 
@@ -46,16 +47,23 @@
 - **[新版本特性](java-core/05-Java新版本特性.md)** ✅ - Java 8~21（Record、Sealed Class、Virtual Thread）
 
 **🎯 学习目标**
+
 - 掌握Java核心语法和面向对象思想
 - 理解泛型、反射等高级特性的原理和应用
 - 熟练使用Lambda和Stream进行函数式编程
 - 了解Java各版本的重要新特性
 - 面试高频知识点全覆盖
 
-**📖 完整文档**
+**📖 快速开始**
+
 - 📖 [Java语言基础完整导航](java-core/README.md)
+- 📄 [01-Java语法基础](java-core/01-Java语法基础.md)
+- 📄 [02-面向对象编程](java-core/02-面向对象编程.md)
+- 📄 [03-Java高级特性](java-core/03-Java高级特性.md)
+- 📄 [04-函数式编程](java-core/04-函数式编程.md)
+- 📄 [05-Java新版本特性](java-core/05-Java新版本特性.md)
 
-
+</details>
 
 <details>
 <summary><strong>🗂️ Java 集合框架</strong> 🔵 规划中</summary>
@@ -69,11 +77,12 @@
 - **集合工具** - Collections、Arrays、Iterator、Comparator
 
 **🎯 学习目标**
+
 - 理解底层实现（数组、链表、红黑树、跳表）
 - 掌握性能特点和使用场景
 - 面试高频考点全覆盖
 
-
+</details>
 
 <details>
 <summary><strong>🧵 Java 并发编程</strong> 🔵 规划中</summary>
@@ -90,11 +99,12 @@
 - **虚拟线程** - Java 21 Virtual Threads
 
 **🎯 学习目标**
+
 - 深入理解 Java 内存模型（JMM）
 - 掌握并发编程最佳实践
 - 能排查和解决并发问题
 
-
+</details>
 
 <details>
 <summary><strong>🔧 JVM 虚拟机</strong> 🔵 规划中</summary>
@@ -110,11 +120,12 @@
 - **性能监控** - JConsole、VisualVM、Arthas
 
 **🎯 学习目标**
+
 - 深入理解 JVM 运行机制
 - 掌握 JVM 调优技能
 - 排查内存泄漏、CPU 飙高问题
 
-
+</details>
 
 <details>
 <summary><strong>🌐 Java 网络编程</strong> 🔵 规划中</summary>
@@ -128,7 +139,7 @@
 - **序列化** - Protobuf、JSON、Kryo、Hessian
 - **HTTP 客户端** - HttpClient、OkHttp、Retrofit
 
-
+</details>
 
 <details open>
 <summary><strong>🌱 Spring 全家桶</strong> 🟡 进行中 | <a href="auth/01-认证授权基础.md">📖 已完成：认证授权</a></summary>
@@ -160,7 +171,7 @@
 **其他框架**
 - Lombok、MapStruct、Quartz、Netty
 
-
+</details>
 
 ---
 
@@ -180,7 +191,7 @@
 - **哈希表** - 哈希函数、冲突解决、一致性哈希
 - **高级结构** - 并查集、跳表、布隆过滤器、LRU/LFU
 
-
+</details>
 
 <details>
 <summary><strong>🧮 算法</strong> 🔵 规划中</summary>
@@ -195,7 +206,7 @@
 - **回溯** - N 皇后、数独、全排列
 - **图算法** - DFS、BFS、Dijkstra、Floyd
 
-
+</details>
 
 <details>
 <summary><strong>💻 LeetCode 刷题</strong> 🔵 规划中</summary>
@@ -205,7 +216,7 @@
 - 基础 100 题、进阶 200 题、高级 100 题
 - 剑指 Offer、Hot 100、周赛/双周赛
 
-
+</details>
 
 ---
 
@@ -228,7 +239,7 @@
 - **分库分表** - ShardingSphere
 - **性能调优** - 慢查询分析、参数调优
 
-
+</details>
 
 <details>
 <summary><strong>📝 Redis</strong> 🔵 规划中</summary>
@@ -243,7 +254,7 @@
 - **分布式锁** - SETNX、Redisson、RedLock
 - **性能优化** - Pipeline、Lua 脚本
 
-
+</details>
 
 <details>
 <summary><strong>🐘 PostgreSQL</strong> 🔵 规划中</summary>
@@ -253,7 +264,7 @@
 - 基础使用、高级特性（JSON、全文检索、GIS）
 - 性能优化、高可用
 
-
+</details>
 
 <details>
 <summary><strong>🍃 MongoDB</strong> 🔵 规划中</summary>
@@ -262,7 +273,7 @@
 
 - 文档模型、索引、复制集、分片、性能优化
 
-
+</details>
 
 <details>
 <summary><strong>🔍 Elasticsearch</strong> 🔵 规划中</summary>
@@ -271,7 +282,7 @@
 
 - 基础概念、全文检索、聚合分析、集群管理
 
-
+</details>
 
 ---
 
@@ -287,7 +298,7 @@
 - 数字逻辑、冯·诺依曼结构、数据运算
 - 存储系统、指令系统、CPU 原理、总线与 I/O
 
-
+</details>
 
 <details>
 <summary><strong>🖥️ 操作系统</strong> 🔵 规划中</summary>
@@ -297,7 +308,7 @@
 - 进程与线程、处理器调度、同步与互斥
 - 内存管理、文件系统、I/O 管理、Linux 编程
 
-
+</details>
 
 <details>
 <summary><strong>🌐 计算机网络</strong> 🔵 规划中</summary>
@@ -308,7 +319,7 @@
 - TCP（三次握手、四次挥手、拥塞控制）
 - HTTP/HTTPS、DNS、网络安全、Socket 编程
 
-
+</details>
 
 ---
 
@@ -325,7 +336,7 @@
 - **RabbitMQ** - AMQP 协议、Exchange、Queue
 - **RocketMQ** - 事务消息、延时消息
 
-
+</details>
 
 <details>
 <summary><strong>🔧 服务治理</strong> 🔵 规划中</summary>
@@ -334,7 +345,7 @@
 
 - Dubbo、Zookeeper、Nacos、Consul
 
-
+</details>
 
 <details>
 <summary><strong>🌊 API 网关</strong> 🔵 规划中</summary>
@@ -343,7 +354,7 @@
 
 - Spring Cloud Gateway、Kong、Nginx
 
-
+</details>
 
 <details>
 <summary><strong>📊 监控与日志</strong> 🔵 规划中</summary>
@@ -352,7 +363,7 @@
 
 - Prometheus + Grafana、ELK Stack、SkyWalking
 
-
+</details>
 
 ---
 
@@ -368,7 +379,7 @@
 - 创建型、结构型、行为型模式
 - Spring 中的设计模式源码分析
 
-
+</details>
 
 <details>
 <summary><strong>🏛️ 架构模式</strong> 🔵 规划中</summary>
@@ -377,7 +388,7 @@
 
 - 分层架构、微服务架构、SOA、事件驱动、Serverless
 
-
+</details>
 
 <details>
 <summary><strong>🌐 分布式系统</strong> 🔵 规划中</summary>
@@ -388,7 +399,7 @@
 - 分布式事务、分布式锁、分布式 ID
 - 分布式缓存、分布式存储
 
-
+</details>
 
 <details>
 <summary><strong>📈 性能优化</strong> 🔵 规划中</summary>
@@ -398,7 +409,7 @@
 - JVM 调优、数据库调优、应用调优
 - 高并发方案（限流、降级、熔断）
 
-
+</details>
 
 <details>
 <summary><strong>💡 系统设计案例</strong> 🔵 规划中</summary>
@@ -408,7 +419,7 @@
 - 秒杀系统、短链系统、订单系统
 - 支付系统、IM 系统
 
-
+</details>
 
 ---
 
@@ -428,7 +439,7 @@
 - **SSO 单点登录** ✅ - CAS、OAuth2 实现
 - **Web 安全** - XSS、CSRF、SQL 注入、HTTPS
 
-
+</details>
 
 <details>
 <summary><strong>🛡️ 安全加固</strong> 🔵 规划中</summary>
@@ -437,7 +448,7 @@
 
 - 渗透测试、安全审计、防护措施
 
-
+</details>
 
 ---
 
@@ -453,7 +464,7 @@
 - Docker 镜像、容器、Dockerfile、网络、存储
 - 镜像优化、Docker Compose、容器原理
 
-
+</details>
 
 <details>
 <summary><strong>⎈ Kubernetes</strong> 🟡 进行中</summary>
@@ -463,7 +474,7 @@
 - Pod、Service、Deployment、ConfigMap
 - 网络、存储、调度、高可用
 
-
+</details>
 
 <details>
 <summary><strong>🚀 云原生工具</strong> 🟡 进行中</summary>
@@ -474,7 +485,7 @@
 - **Tailscale** ⚡ - 零配置 VPN（当前项目）
 - Istio、Prometheus
 
-
+</details>
 
 ---
 
@@ -489,7 +500,7 @@
 
 - Git、GitFlow、GitHub/GitLab
 
-
+</details>
 
 <details>
 <summary><strong>🚀 CI/CD</strong> 🟡 进行中</summary>
@@ -498,7 +509,7 @@
 
 - GitHub Actions、Jenkins、GitLab CI
 
-
+</details>
 
 <details>
 <summary><strong>📦 构建工具</strong> 🟡 进行中</summary>
@@ -507,7 +518,7 @@
 
 - Maven、Gradle、打包部署
 
-
+</details>
 
 <details open>
 <summary><strong>📝 文档与博客</strong> 🟢 已完成 | <a href="devops/01-博客搭建指南.md">📖 搭建指南</a></summary>
@@ -517,7 +528,7 @@
 - **MkDocs** ✅ - 技术文档、GitHub Pages
 - Obsidian、Markdown、技术博客写作
 
-
+</details>
 
 ---
 
@@ -532,7 +543,7 @@
 
 - 代码规范、Clean Code、重构、Code Review
 
-
+</details>
 
 <details>
 <summary><strong>🧪 测试</strong> 🔵 规划中</summary>
@@ -541,7 +552,7 @@
 
 - 单元测试、集成测试、性能测试、TDD/BDD
 
-
+</details>
 
 ---
 
@@ -557,7 +568,7 @@
 - 监督学习、非监督学习、深度学习
 - NumPy、Pandas、PyTorch
 
-
+</details>
 
 <details>
 <summary><strong>💬 大语言模型</strong> 🔵 规划中</summary>
@@ -566,7 +577,7 @@
 
 - Prompt Engineering、LangChain、RAG
 
-
+</details>
 
 ---
 
@@ -583,7 +594,7 @@
 - Go：Goroutine、标准库、微服务
 - Python：基础语法、数据分析、Web开发
 
-
+</details>
 
 ---
 
@@ -598,7 +609,7 @@
 - 周/月/年度总结、技术反思
 - Bug 排查、性能问题、踩坑记录
 
-
+</details>
 
 ---
 
@@ -615,7 +626,7 @@
 - 技术面试、项目经验、简历优化
 - 沟通能力、项目管理、团队协作
 
-
+</details>
 
 ---
 
@@ -626,11 +637,11 @@
 | 📈 维度 | 📊 数据 |
 |:---:|:---|
 | **知识模块** | 14 大类 70+ 小类 |
-| **已完成** | 认证授权专题、博客搭建 |
+| **已完成** | Java语言基础、认证授权、博客搭建 |
 | **进行中** | Spring、容器技术、云原生工具 |
-| **总文档** | 10+ 篇，持续增加中 |
+| **总文档** | 15+ 篇，持续增加中 |
 
-
+</div>
 
 ---
 
@@ -689,6 +700,6 @@
 
 ---
 
-**[📖 开始学习](auth/01-认证授权基础.md) · [🌐 在线阅读](https://zhangzimingmmz.github.io/OpenTheDoor/) · [💬 交流反馈](https://github.com/zhangzimingmmz/OpenTheDoor/issues)**
+**[📖 开始学习](java-core/README.md) · [🌐 在线阅读](https://zhangzimingmmz.github.io/OpenTheDoor/) · [💬 交流反馈](https://github.com/zhangzimingmmz/OpenTheDoor/issues)**
 
-
+</div>
