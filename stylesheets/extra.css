@@ -1,11 +1,11 @@
 /* ========================================
    OpenTheDoor 自定义样式
-   现代化、清新、有活力的设计风格
+   GitHub 风格设计
    ======================================== */
 
-/* 📌 1. 首页标题优化 */
+/* 📌 1. 首页标题优化 - GitHub 风格 */
 .md-content h1 {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0969da 0%, #1f6feb 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -15,141 +15,135 @@
     text-align: center;
 }
 
-/* 📌 2. Admonition 美化 */
+/* 📌 2. Admonition 美化 - GitHub 风格 */
 .md-typeset .admonition {
     border-radius: 0.6rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
     border-left: 0.4rem solid;
     transition: all 0.3s ease;
 }
 
 .md-typeset .admonition:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
 }
 
 /* Success 提示框 */
 .md-typeset .admonition.success {
-    border-left-color: #00c853;
+    border-left-color: #1a7f37;
 }
 
 /* Tip 提示框 */
 .md-typeset .admonition.tip {
-    border-left-color: #00b8d4;
+    border-left-color: #0969da;
 }
 
 /* Info 提示框 */
 .md-typeset .admonition.info {
-    border-left-color: #0091ea;
+    border-left-color: #0969da;
 }
 
 /* Quote 引用框 */
 .md-typeset .admonition.quote {
-    border-left-color: #aa00ff;
-    background: linear-gradient(135deg, rgba(170, 0, 255, 0.05) 0%, rgba(103, 58, 183, 0.05) 100%);
+    border-left-color: #6e7781;
+    background: rgba(175, 184, 193, 0.05);
 }
 
-/* 📌 3. 按钮美化 */
+/* 📌 3. 按钮美化 - GitHub 风格 */
 .md-button {
-    border-radius: 2rem !important;
-    padding: 0.6rem 1.5rem !important;
+    border-radius: 0.4rem !important;
+    padding: 0.6rem 1.2rem !important;
     font-weight: 600 !important;
     text-transform: none !important;
-    transition: all 0.3s ease !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12) !important;
 }
 
 .md-button:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
 }
 
 .md-button--primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    background: linear-gradient(135deg, #0969da 0%, #1f6feb 100%) !important;
     color: white !important;
 }
 
-/* 📌 4. 表格优化 */
+/* 📌 4. 表格优化 - GitHub 风格 */
 .md-typeset table:not([class]) {
     border-radius: 0.6rem;
     overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
     font-size: 0.9rem;
+    border: 1px solid #d0d7de;
 }
 
 .md-typeset table:not([class]) thead {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: #f6f8fa;
+    color: #24292f;
+    border-bottom: 2px solid #d0d7de;
 }
 
 .md-typeset table:not([class]) th {
-    color: white !important;
+    color: #24292f !important;
     font-weight: 700;
-    padding: 1rem !important;
+    padding: 0.75rem 1rem !important;
 }
 
 .md-typeset table:not([class]) td {
-    padding: 0.8rem 1rem !important;
+    padding: 0.75rem 1rem !important;
+    border-bottom: 1px solid #d0d7de;
 }
 
 .md-typeset table:not([class]) tbody tr:hover {
-    background-color: rgba(102, 126, 234, 0.05);
+    background-color: #f6f8fa;
 }
 
-/* 📌 5. 代码块优化 */
+/* 📌 5. 代码块优化 - GitHub 风格 */
 .md-typeset pre > code {
     border-radius: 0.6rem;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
-/* 📌 6. 链接优化 */
+/* 📌 6. 链接优化 - GitHub 蓝色 */
 .md-typeset a {
-    color: #667eea;
+    color: #0969da;
     font-weight: 500;
     transition: all 0.2s ease;
 }
 
 .md-typeset a:hover {
-    color: #764ba2;
+    color: #0550ae;
     text-decoration: underline;
 }
 
-/* 📌 7. 状态标签美化 */
-.md-typeset h3:has(+ p:contains("🟢")),
-.md-typeset h3:has(+ p:contains("🟡")),
-.md-typeset h3:has(+ p:contains("🔵")) {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-/* 📌 8. 分隔线美化 */
+/* 📌 7. 分隔线美化 - GitHub 风格 */
 .md-typeset hr {
     border: none;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #667eea, transparent);
-    margin: 2.5rem 0;
+    height: 1px;
+    background: #d0d7de;
+    margin: 2rem 0;
 }
 
-/* 📌 9. 侧边栏优化 */
+/* 📌 8. 侧边栏优化 - GitHub 风格 */
 .md-sidebar {
-    background: linear-gradient(180deg, rgba(102, 126, 234, 0.02) 0%, rgba(118, 75, 162, 0.02) 100%);
+    background: #f6f8fa;
 }
 
-/* 📌 10. 导航标签优化 */
+/* 📌 9. 导航标签优化 - GitHub 风格 */
 .md-tabs {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #24292f;
 }
 
-/* 📌 11. 内容卡片化 */
+/* 📌 10. 内容卡片化 */
 .md-content__inner {
     padding: 2rem;
 }
 
-/* 📌 12. 徽章美化 */
+/* 📌 11. 徽章美化 */
 .md-typeset img[src*="shields.io"],
 .md-typeset img[src*="badge"] {
-    border-radius: 1rem;
+    border-radius: 0.4rem;
     transition: transform 0.2s ease;
 }
 
@@ -158,44 +152,47 @@
     transform: scale(1.05);
 }
 
-/* 📌 13. Details 折叠块美化 */
+/* 📌 12. Details 折叠块美化 - GitHub 风格 */
 .md-typeset details {
     border-radius: 0.6rem;
-    border: 2px solid rgba(102, 126, 234, 0.2);
-    padding: 1rem;
+    border: 1px solid #d0d7de;
+    padding: 0;
     margin: 1rem 0;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.03) 0%, rgba(118, 75, 162, 0.03) 100%);
-    transition: all 0.3s ease;
+    background: #ffffff;
+    transition: all 0.2s ease;
 }
 
 .md-typeset details:hover {
-    border-color: rgba(102, 126, 234, 0.4);
-    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.1);
+    border-color: #0969da;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 .md-typeset details summary {
     font-weight: 700;
-    font-size: 1.1rem;
-    color: #667eea;
+    font-size: 1rem;
+    color: #24292f;
     cursor: pointer;
-    padding: 0.5rem;
-    border-radius: 0.4rem;
+    padding: 1rem;
+    border-radius: 0.6rem 0.6rem 0 0;
     transition: all 0.2s ease;
     display: flex;
     align-items: center;
+    background: #f6f8fa;
 }
 
 .md-typeset details summary:hover {
-    background: rgba(102, 126, 234, 0.1);
-    padding-left: 1rem;
+    background: #e7ecf0;
 }
 
 .md-typeset details[open] summary {
-    margin-bottom: 1rem;
-    border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+    border-bottom: 1px solid #d0d7de;
 }
 
-/* 📌 14. 响应式优化 */
+.md-typeset details[open] > *:not(summary) {
+    padding: 1rem;
+}
+
+/* 📌 13. 响应式优化 */
 @media screen and (max-width: 768px) {
     .md-content h1 {
         font-size: 2rem !important;
@@ -207,7 +204,7 @@
     }
 }
 
-/* 📌 15. 动画效果 */
+/* 📌 14. 动画效果 */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -220,47 +217,89 @@
 }
 
 .md-content__inner > * {
-    animation: fadeInUp 0.6s ease-out;
+    animation: fadeInUp 0.4s ease-out;
 }
 
-/* 📌 16. 滚动条美化 */
+/* 📌 15. 滚动条美化 - GitHub 风格 */
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.05);
+    background: #f6f8fa;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #d0d7de;
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    background: #afb8c1;
 }
 
-/* 📌 17. 页脚优化 */
+/* 📌 16. 页脚优化 - GitHub 风格 */
 .md-footer {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #24292f;
 }
 
-/* 📌 18. 搜索框优化 */
+/* 📌 17. 搜索框优化 */
 .md-search__input {
-    border-radius: 2rem;
+    border-radius: 0.4rem;
 }
 
-/* 📌 19. 标题前的 emoji 优化 */
-.md-typeset h2::before,
-.md-typeset h3::before {
-    margin-right: 0.5rem;
-}
-
-/* 📌 20. 高亮文本 */
+/* 📌 18. 高亮文本 - GitHub 风格 */
 .md-typeset mark {
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+    background: rgba(255, 223, 93, 0.4);
     border-radius: 0.2rem;
     padding: 0.1rem 0.3rem;
+}
+
+/* 📌 19. 引用块 - GitHub 风格 */
+.md-typeset blockquote {
+    border-left: 0.25rem solid #d0d7de;
+    padding-left: 1rem;
+    color: #57606a;
+}
+
+/* 📌 20. 深色模式适配 */
+[data-md-color-scheme="slate"] .md-typeset details {
+    background: #161b22;
+    border-color: #30363d;
+}
+
+[data-md-color-scheme="slate"] .md-typeset details summary {
+    background: #0d1117;
+    color: #c9d1d9;
+}
+
+[data-md-color-scheme="slate"] .md-typeset details summary:hover {
+    background: #161b22;
+}
+
+[data-md-color-scheme="slate"] .md-typeset details[open] summary {
+    border-bottom-color: #30363d;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) {
+    border-color: #30363d;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) thead {
+    background: #161b22;
+    color: #c9d1d9;
+    border-bottom-color: #30363d;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+    color: #c9d1d9 !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
+    border-bottom-color: #30363d;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tbody tr:hover {
+    background-color: #161b22;
 }
