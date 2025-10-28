@@ -86,6 +86,11 @@ nav:
   - DevOps与工具:
     - 概述: devops/README.md
     - 博客搭建指南: devops/01-博客搭建指南.md
+  - 云原生技术:
+    - 概述: cloud-native/README.md
+    - Nomad基础入门: cloud-native/01-Nomad基础入门.md
+    - Nomad核心概念: cloud-native/02-Nomad核心概念.md
+    - Nomad与Tailscale集成: cloud-native/07-Nomad与Tailscale集成.md
 
 # Markdown 扩展
 markdown_extensions:
