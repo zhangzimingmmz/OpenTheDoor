@@ -1,617 +1,266 @@
 /* ========================================
-   OpenTheDoor 博客自定义样式
+   OpenTheDoor 自定义样式
+   现代化、清新、有活力的设计风格
    ======================================== */
 
-/* ============ 基础样式 ============ */
-
-/* 中文字体优化 */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
-               "Helvetica Neue", Arial, "Noto Sans", sans-serif, 
-               "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 
-               "Noto Color Emoji", "Microsoft YaHei", "微软雅黑", "PingFang SC";
-  font-size: 16px;
-  line-height: 1.8;
-}
-
-/* 主体背景渐变 */
-.md-main {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  background-attachment: fixed;
-}
-
-/* 内容区域背景 */
-.md-content {
-  background: transparent;
-}
-
-.md-content__inner {
-  background: rgba(255, 255, 255, 0.98);
-  border-radius: 16px;
-  padding: 3rem 2.5rem;
-  margin: 1rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-}
-
-[data-md-color-scheme="slate"] .md-content__inner {
-  background: rgba(30, 30, 35, 0.95);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-}
-
-[data-md-color-scheme="slate"] .md-main {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-}
-
-/* ============ 代码块样式 ============ */
-
-/* 代码块字体 */
-code, .highlight code {
-  font-family: 'Consolas', 'Monaco', 'Menlo', 'Courier New', monospace;
-  font-size: 0.875em;
-  font-variant-ligatures: none;
-}
-
-/* 行内代码 */
-code:not(.highlight code) {
-  background-color: rgba(175, 184, 193, 0.2);
-  border-radius: 3px;
-  padding: 2px 6px;
-  color: #e83e8c;
-  word-break: break-word;
-}
-
-[data-md-color-scheme="slate"] code:not(.highlight code) {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ff6ec7;
-}
-
-/* 代码块容器 */
-.highlight {
-  margin: 1.5em 0;
-  border-radius: 0.4rem;
-  overflow: hidden;
-}
-
-/* 代码块行号 */
-.highlight .linenos {
-  user-select: none;
-  opacity: 0.6;
-}
-
-/* 代码块复制按钮美化 */
-.md-clipboard {
-  border-radius: 0.2rem;
-}
-
-/* ============ 表格样式 ============ */
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 1.5em 0;
-  border-radius: 0.4rem;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-table thead {
-  background-color: rgba(98, 114, 164, 0.1);
-}
-
-[data-md-color-scheme="slate"] table thead {
-  background-color: rgba(98, 114, 164, 0.2);
-}
-
-table th {
-  font-weight: 600;
-  padding: 0.8rem 1rem;
-  text-align: left;
-}
-
-table td {
-  padding: 0.6rem 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-[data-md-color-scheme="slate"] table td {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-table tr:hover {
-  background-color: rgba(98, 114, 164, 0.05);
-}
-
-/* ============ 警告框样式 ============ */
-
-.admonition {
-  margin: 1.5625em 0;
-  padding: 0.6rem 0.8rem;
-  border-left: 0.3rem solid;
-  border-radius: 0.3rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.admonition-title {
-  font-weight: 600;
-  margin: 0 0 0.5rem;
-}
-
-/* 不同类型的警告框 */
-.admonition.note {
-  border-left-color: #448aff;
-  background-color: rgba(68, 138, 255, 0.1);
-}
-
-.admonition.tip {
-  border-left-color: #00c853;
-  background-color: rgba(0, 200, 83, 0.1);
-}
-
-.admonition.warning {
-  border-left-color: #ff9100;
-  background-color: rgba(255, 145, 0, 0.1);
-}
-
-.admonition.danger {
-  border-left-color: #ff5252;
-  background-color: rgba(255, 82, 82, 0.1);
-}
-
-/* ============ 链接样式 ============ */
-
-a {
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-  transform: translateX(2px);
-}
-
-/* 文章内链接 */
-.md-content a {
-  color: #4051b5;
-  border-bottom: 1px dotted rgba(64, 81, 181, 0.3);
-}
-
-[data-md-color-scheme="slate"] .md-content a {
-  color: #82b1ff;
-  border-bottom: 1px dotted rgba(130, 177, 255, 0.3);
-}
-
-.md-content a:hover {
-  border-bottom-style: solid;
-}
-
-/* ============ 标题样式 ============ */
-
+/* 📌 1. 首页标题优化 */
 .md-content h1 {
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+    font-size: 3rem !important;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
-.md-content h2 {
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+/* 📌 2. Admonition 美化 */
+.md-typeset .admonition {
+    border-radius: 0.6rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 0.4rem solid;
+    transition: all 0.3s ease;
 }
 
-[data-md-color-scheme="slate"] .md-content h2 {
-  border-bottom-color: rgba(255, 255, 255, 0.1);
+.md-typeset .admonition:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
 }
 
-.md-content h3 {
-  margin-top: 1.8rem;
-  margin-bottom: 0.8rem;
-  font-weight: 600;
+/* Success 提示框 */
+.md-typeset .admonition.success {
+    border-left-color: #00c853;
 }
 
-/* 标题锚点 */
-.md-content .headerlink {
-  opacity: 0;
-  margin-left: 0.5rem;
-  transition: opacity 0.2s;
+/* Tip 提示框 */
+.md-typeset .admonition.tip {
+    border-left-color: #00b8d4;
 }
 
-.md-content h1:hover .headerlink,
-.md-content h2:hover .headerlink,
-.md-content h3:hover .headerlink {
-  opacity: 1;
+/* Info 提示框 */
+.md-typeset .admonition.info {
+    border-left-color: #0091ea;
 }
 
-/* ============ 列表样式 ============ */
-
-.md-content ul,
-.md-content ol {
-  margin: 1em 0;
-  padding-left: 2rem;
+/* Quote 引用框 */
+.md-typeset .admonition.quote {
+    border-left-color: #aa00ff;
+    background: linear-gradient(135deg, rgba(170, 0, 255, 0.05) 0%, rgba(103, 58, 183, 0.05) 100%);
 }
 
-.md-content li {
-  margin: 0.4em 0;
+/* 📌 3. 按钮美化 */
+.md-button {
+    border-radius: 2rem !important;
+    padding: 0.6rem 1.5rem !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* 任务列表 */
-.md-content .task-list-item {
-  list-style: none;
-  margin-left: -2rem;
-  padding-left: 2rem;
+.md-button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
 }
 
-.md-content .task-list-item input[type="checkbox"] {
-  margin-right: 0.5rem;
+.md-button--primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
 }
 
-/* ============ 引用块样式 ============ */
-
-blockquote {
-  margin: 1.5em 0;
-  padding: 0.8rem 1.2rem;
-  border-left: 4px solid #4051b5;
-  background-color: rgba(64, 81, 181, 0.05);
-  border-radius: 0 0.3rem 0.3rem 0;
-  font-style: italic;
+/* 📌 4. 表格优化 */
+.md-typeset table:not([class]) {
+    border-radius: 0.6rem;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    font-size: 0.9rem;
 }
 
-[data-md-color-scheme="slate"] blockquote {
-  background-color: rgba(130, 177, 255, 0.1);
-  border-left-color: #82b1ff;
+.md-typeset table:not([class]) thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
 }
 
-/* ============ 图片样式 ============ */
-
-.md-content img {
-  border-radius: 0.4rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  margin: 1.5rem auto;
-  display: block;
-  max-width: 100%;
-  transition: transform 0.3s ease;
+.md-typeset table:not([class]) th {
+    color: white !important;
+    font-weight: 700;
+    padding: 1rem !important;
 }
 
-.md-content img:hover {
-  transform: scale(1.02);
+.md-typeset table:not([class]) td {
+    padding: 0.8rem 1rem !important;
 }
 
-/* ============ 分割线样式 ============ */
-
-hr {
-  margin: 2.5rem 0;
-  border: none;
-  border-top: 2px solid rgba(0, 0, 0, 0.08);
+.md-typeset table:not([class]) tbody tr:hover {
+    background-color: rgba(102, 126, 234, 0.05);
 }
 
-[data-md-color-scheme="slate"] hr {
-  border-top-color: rgba(255, 255, 255, 0.1);
+/* 📌 5. 代码块优化 */
+.md-typeset pre > code {
+    border-radius: 0.6rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* ============ 导航栏优化 ============ */
-
-/* 顶部导航栏 - 渐变背景 */
-.md-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
-  backdrop-filter: blur(10px);
+/* 📌 6. 链接优化 */
+.md-typeset a {
+    color: #667eea;
+    font-weight: 500;
+    transition: all 0.2s ease;
 }
 
-[data-md-color-scheme="slate"] .md-header {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+.md-typeset a:hover {
+    color: #764ba2;
+    text-decoration: underline;
 }
 
-/* 左侧导航栏 */
-.md-sidebar--primary {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+/* 📌 7. 状态标签美化 */
+.md-typeset h3:has(+ p:contains("🟢")),
+.md-typeset h3:has(+ p:contains("🟡")),
+.md-typeset h3:has(+ p:contains("🔵")) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-[data-md-color-scheme="slate"] .md-sidebar--primary {
-  background: rgba(30, 30, 35, 0.95);
+/* 📌 8. 分隔线美化 */
+.md-typeset hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #667eea, transparent);
+    margin: 2.5rem 0;
 }
 
-.md-nav__title {
-  font-weight: 600;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+/* 📌 9. 侧边栏优化 */
+.md-sidebar {
+    background: linear-gradient(180deg, rgba(102, 126, 234, 0.02) 0%, rgba(118, 75, 162, 0.02) 100%);
 }
 
-.md-nav__link--active {
-  font-weight: 600;
-  color: #667eea;
-  background: rgba(102, 126, 234, 0.1);
-  border-radius: 6px;
+/* 📌 10. 导航标签优化 */
+.md-tabs {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-[data-md-color-scheme="slate"] .md-nav__link--active {
-  color: #82b1ff;
-  background: rgba(130, 177, 255, 0.15);
-}
-
-/* 右侧目录 */
-.md-sidebar--secondary {
-  order: 2;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-}
-
-[data-md-color-scheme="slate"] .md-sidebar--secondary {
-  background: rgba(30, 30, 35, 0.95);
-}
-
-.md-nav--secondary .md-nav__link--active {
-  color: #667eea;
-  font-weight: 600;
-  border-left: 3px solid #667eea;
-  padding-left: 0.5rem;
-}
-
-[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link--active {
-  color: #82b1ff;
-  border-left-color: #82b1ff;
-}
-
-/* ============ 搜索框优化 ============ */
-
-.md-search__input {
-  border-radius: 0.3rem;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.md-search__input:focus {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-/* ============ 页脚样式 ============ */
-
-.md-footer-meta {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-[data-md-color-scheme="slate"] .md-footer-meta {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-/* ============ 返回顶部按钮 ============ */
-
-.md-top {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 50%;
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-  transition: all 0.3s ease;
-}
-
-.md-top:hover {
-  background: linear-gradient(135deg, #5568d3 0%, #6a4394 100%);
-  transform: scale(1.15) rotate(360deg);
-  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
-}
-
-/* ============ 打印样式优化 ============ */
-
-@media print {
-  .md-header,
-  .md-sidebar,
-  .md-footer,
-  .md-top {
-    display: none;
-  }
-  
-  .md-content__inner {
-    margin: 0;
-    padding: 0;
-  }
-  
-  a {
-    color: #000;
-    text-decoration: none;
-  }
-}
-
-/* ============ 响应式优化 ============ */
-
-@media screen and (max-width: 76.1875em) {
-  .md-content__inner {
-    padding: 1.5rem 1rem;
-  }
-}
-
-@media screen and (max-width: 44.9375em) {
-  body {
-    font-size: 14px;
-  }
-  
-  .md-content h1 {
-    font-size: 1.8em;
-  }
-  
-  .md-content h2 {
-    font-size: 1.5em;
-  }
-}
-
-/* ============ 自定义动画 ============ */
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* 📌 11. 内容卡片化 */
 .md-content__inner {
-  animation: fadeIn 0.5s ease;
+    padding: 2rem;
 }
 
-/* ============ 特殊标记样式 ============ */
-
-/* NEW 标签 */
-.md-content code.language-plaintext {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  font-weight: 600;
-  padding: 3px 8px;
-  border-radius: 4px;
-  font-size: 0.75em;
-  vertical-align: middle;
+/* 📌 12. 徽章美化 */
+.md-typeset img[src*="shields.io"],
+.md-typeset img[src*="badge"] {
+    border-radius: 1rem;
+    transition: transform 0.2s ease;
 }
 
-/* 徽章样式 */
-.md-typeset .badge {
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 3px;
-  font-size: 0.75em;
-  font-weight: 600;
-  margin: 0 4px;
+.md-typeset img[src*="shields.io"]:hover,
+.md-typeset img[src*="badge"]:hover {
+    transform: scale(1.05);
 }
 
-/* ============ Mermaid 图表样式 ============ */
-.mermaid {
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
-  padding: 1rem;
-  margin: 1.5rem 0;
+/* 📌 13. Details 折叠块美化 */
+.md-typeset details {
+    border-radius: 0.6rem;
+    border: 2px solid rgba(102, 126, 234, 0.2);
+    padding: 1rem;
+    margin: 1rem 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.03) 0%, rgba(118, 75, 162, 0.03) 100%);
+    transition: all 0.3s ease;
 }
 
-[data-md-color-scheme="slate"] .mermaid {
-  background: rgba(0, 0, 0, 0.2);
+.md-typeset details:hover {
+    border-color: rgba(102, 126, 234, 0.4);
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.1);
 }
 
-/* ============ 首页特殊样式 ============ */
-
-/* 首页标题渐变 */
-.md-content h1:first-of-type {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-size: 2.5em;
-  font-weight: 800;
-  margin-bottom: 0.5em;
+.md-typeset details summary {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #667eea;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
 }
 
-/* 能力矩阵表格增强 */
-.md-content table {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
+.md-typeset details summary:hover {
+    background: rgba(102, 126, 234, 0.1);
+    padding-left: 1rem;
 }
 
-[data-md-color-scheme="slate"] .md-content table {
-  background: rgba(40, 42, 54, 0.6);
+.md-typeset details[open] summary {
+    margin-bottom: 1rem;
+    border-bottom: 2px solid rgba(102, 126, 234, 0.2);
 }
 
-/* ============ 滚动条样式 ============ */
+/* 📌 14. 响应式优化 */
+@media screen and (max-width: 768px) {
+    .md-content h1 {
+        font-size: 2rem !important;
+    }
+    
+    .md-button {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.9rem !important;
+    }
+}
 
+/* 📌 15. 动画效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.md-content__inner > * {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* 📌 16. 滚动条美化 */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+    width: 10px;
+    height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(102, 126, 234, 0.1);
+    background: rgba(0, 0, 0, 0.05);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
-  border-radius: 10px;
-  border: 2px solid transparent;
-  background-clip: padding-box;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #5568d3 0%, #6a4394 100%);
-  background-clip: padding-box;
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
 }
 
-[data-md-color-scheme="slate"] ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
+/* 📌 17. 页脚优化 */
+.md-footer {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-[data-md-color-scheme="slate"] ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
-  border: 2px solid transparent;
-  background-clip: padding-box;
+/* 📌 18. 搜索框优化 */
+.md-search__input {
+    border-radius: 2rem;
 }
 
-/* ============ 卡片样式 ============ */
-
-/* 阶段卡片 */
-.phase-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 247, 250, 0.9) 100%);
-  border-radius: 12px;
-  padding: 2rem;
-  margin: 1.5rem 0;
-  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.15);
-  border-left: 4px solid #667eea;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* 📌 19. 标题前的 emoji 优化 */
+.md-typeset h2::before,
+.md-typeset h3::before {
+    margin-right: 0.5rem;
 }
 
-.phase-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.25);
+/* 📌 20. 高亮文本 */
+.md-typeset mark {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+    border-radius: 0.2rem;
+    padding: 0.1rem 0.3rem;
 }
-
-[data-md-color-scheme="slate"] .phase-card {
-  background: linear-gradient(135deg, rgba(40, 42, 54, 0.9) 0%, rgba(30, 32, 44, 0.9) 100%);
-  border-left-color: #82b1ff;
-}
-
-/* 状态标签 */
-.status-completed {
-  display: inline-block;
-  padding: 4px 12px;
-  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
-  color: white;
-  border-radius: 20px;
-  font-size: 0.85em;
-  font-weight: 600;
-  margin-left: 0.5rem;
-  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
-}
-
-.status-inprogress {
-  display: inline-block;
-  padding: 4px 12px;
-  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
-  color: white;
-  border-radius: 20px;
-  font-size: 0.85em;
-  font-weight: 600;
-  margin-left: 0.5rem;
-  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);
-}
-
-.status-planning {
-  display: inline-block;
-  padding: 4px 12px;
-  background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
-  color: white;
-  border-radius: 20px;
-  font-size: 0.85em;
-  font-weight: 600;
-  margin-left: 0.5rem;
-  box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3);
-}
-
-.status-future {
-  display: inline-block;
-  padding: 4px 12px;
-  background: linear-gradient(135deg, #9E9E9E 0%, #757575 100%);
-  color: white;
-  border-radius: 20px;
-  font-size: 0.85em;
-  font-weight: 600;
-  margin-left: 0.5rem;
-  box-shadow: 0 2px 8px rgba(158, 158, 158, 0.3);
-}
-

@@ -14,19 +14,19 @@ theme:
   name: material
   language: zh
   palette:
-    # 浅色模式
+    # 浅色模式 - 清新蓝绿渐变
     - scheme: default
-      primary: indigo
-      accent: indigo
+      primary: teal
+      accent: cyan
       toggle:
-        icon: material/brightness-7
+        icon: material/weather-sunny
         name: 切换到深色模式
-    # 深色模式
+    # 深色模式 - 炫酷紫蓝渐变
     - scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: deep purple
+      accent: purple
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-night
         name: 切换到浅色模式
   features:
     # 导航功能
