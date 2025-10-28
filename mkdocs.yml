@@ -14,19 +14,19 @@ theme:
   name: material
   language: zh
   palette:
-    # 浅色模式 - 清新蓝绿渐变
+    # 浅色模式 - GitHub 风格
     - scheme: default
-      primary: teal
-      accent: cyan
+      primary: blue grey
+      accent: blue
       toggle:
-        icon: material/weather-sunny
+        icon: material/brightness-7
         name: 切换到深色模式
-    # 深色模式 - 炫酷紫蓝渐变
+    # 深色模式 - GitHub 风格
     - scheme: slate
-      primary: deep purple
-      accent: purple
+      primary: blue grey
+      accent: blue
       toggle:
-        icon: material/weather-night
+        icon: material/brightness-4
         name: 切换到浅色模式
   features:
     # 导航功能
