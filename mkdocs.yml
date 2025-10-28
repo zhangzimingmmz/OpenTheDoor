@@ -66,6 +66,13 @@ theme:
 # 导航结构
 nav:
   - 首页: index.md
+  - Java核心技术:
+    - 概述: java-core/README.md
+    - Java语法基础: java-core/01-Java语法基础.md
+    - 面向对象编程: java-core/02-面向对象编程.md
+    - Java高级特性: java-core/03-Java高级特性.md
+    - 函数式编程: java-core/04-函数式编程.md
+    - Java新版本特性: java-core/05-Java新版本特性.md
   - 认证授权:
     - 概述: auth/README.md
     - 认证授权基础: auth/01-认证授权基础.md
