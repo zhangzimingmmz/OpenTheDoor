@@ -73,6 +73,7 @@ nav:
     - Java高级特性: java-core/03-Java高级特性.md
     - 函数式编程: java-core/04-函数式编程.md
     - Java新版本特性: java-core/05-Java新版本特性.md
+    - Java集合框架: java-core/06-Java集合框架.md
   - 认证授权:
     - 概述: auth/README.md
     - 认证授权基础: auth/01-认证授权基础.md
@@ -220,6 +221,7 @@ extra:
   # SEO 和社交媒体卡片
   tags:
     Java: java
+    集合框架: collections
     Spring: spring
     认证授权: auth
     DevOps: devops
