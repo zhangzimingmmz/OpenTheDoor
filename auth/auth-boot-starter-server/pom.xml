@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>cn.zhangziming</groupId>
+        <artifactId>auth-boot-starter-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    
+    <artifactId>auth-boot-starter-server</artifactId>
+    <name>Auth Boot Starter Server</name>
+    <description>认证服务端模块 - 用户管理、角色权限、认证接口</description>
+    
+    <dependencies>
+        <!-- Security模块 -->
+        <dependency>
+            <groupId>cn.zhangziming</groupId>
+            <artifactId>auth-boot-starter-security</artifactId>
+        </dependency>
+        
+        <!-- MyBatis模块 -->
+        <dependency>
+            <groupId>cn.zhangziming</groupId>
+            <artifactId>auth-boot-starter-mybatis</artifactId>
+        </dependency>
+        
+        <!-- Redis模块 -->
+        <dependency>
+            <groupId>cn.zhangziming</groupId>
+            <artifactId>auth-boot-starter-redis</artifactId>
+        </dependency>
+        
+        <!-- Web模块 -->
+        <dependency>
+            <groupId>cn.zhangziming</groupId>
+            <artifactId>auth-boot-starter-web</artifactId>
+        </dependency>
+        
+        <!-- Client模块（JWT过滤器） - Server端不需要，仅用于Client端应用 -->
+        <!-- 注释掉，Server端使用自己的ServerJwtAuthenticationFilter -->
+        <!--
+        <dependency>
+            <groupId>cn.zhangziming</groupId>
+            <artifactId>auth-boot-starter-client</artifactId>
+        </dependency>
+        -->
+        
+        <!-- Knife4j (API文档) - 暂时注释，有运行时错误
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+        </dependency>
+        -->
+        
+        <!-- MySQL驱动 -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>cn.zhangziming.auth.server.AuthServerApplication</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+

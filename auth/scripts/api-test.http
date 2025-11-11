@@ -1,0 +1,279 @@
+###
+# Auth Boot Starter API 测试
+# 使用 VS Code REST Client 插件
+###
+
+# 配置变量
+@baseUrl = http://localhost:8080
+@tenantId = DEFAULT
+
+### 变量（Token会在登录后自动填充）
+@accessToken = 
+@refreshToken = 
+@userId = 
+
+### ===== 一、认证接口测试 =====
+
+### 1.1 用户登录
+# @name login
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin123",
+  "tenantId": "{{tenantId}}"
+}
+
+###
+# 保存Token（自动）
+@accessToken = {{login.response.body.data.accessToken}}
+@refreshToken = {{login.response.body.data.refreshToken}}
+
+### 1.2 获取当前用户信息
+GET {{baseUrl}}/api/auth/info
+Authorization: Bearer {{accessToken}}
+
+### 1.3 刷新Token
+POST {{baseUrl}}/api/auth/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "{{refreshToken}}"
+}
+
+### 1.4 用户登出
+POST {{baseUrl}}/api/auth/logout
+Authorization: Bearer {{accessToken}}
+
+### ===== 二、用户管理接口测试 =====
+
+### 2.1 分页查询用户列表
+GET {{baseUrl}}/api/user/list?pageNum=1&pageSize=10
+Authorization: Bearer {{accessToken}}
+
+### 2.2 查询用户详情
+GET {{baseUrl}}/api/user/1
+Authorization: Bearer {{accessToken}}
+
+### 2.3 创建用户
+# @name createUser
+POST {{baseUrl}}/api/user
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{
+  "username": "testuser_{{$timestamp}}",
+  "password": "test123456",
+  "nickname": "测试用户",
+  "email": "test@example.com",
+  "phone": "13800138000",
+  "status": 1,
+  "userType": 1,
+  "tenantId": "{{tenantId}}"
+}
+
+###
+@newUserId = {{createUser.response.body.data}}
+
+### 2.4 更新用户
+PUT {{baseUrl}}/api/user/{{newUserId}}
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{
+  "nickname": "测试用户-已更新",
+  "email": "updated@example.com"
+}
+
+### 2.5 修改用户密码
+PUT {{baseUrl}}/api/user/{{newUserId}}/password?oldPassword=test123456&newPassword=newpass123
+Authorization: Bearer {{accessToken}}
+
+### 2.6 修改用户状态
+PUT {{baseUrl}}/api/user/{{newUserId}}/status?status=0
+Authorization: Bearer {{accessToken}}
+
+### 2.7 删除用户
+DELETE {{baseUrl}}/api/user/{{newUserId}}
+Authorization: Bearer {{accessToken}}
+
+### ===== 三、角色管理接口测试 =====
+
+### 3.1 查询所有角色
+GET {{baseUrl}}/api/role/all
+Authorization: Bearer {{accessToken}}
+
+### 3.2 分页查询角色
+GET {{baseUrl}}/api/role/list?pageNum=1&pageSize=10
+Authorization: Bearer {{accessToken}}
+
+### 3.3 查询角色详情
+GET {{baseUrl}}/api/role/1
+Authorization: Bearer {{accessToken}}
+
+### 3.4 创建角色
+# @name createRole
+POST {{baseUrl}}/api/role
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{
+  "roleCode": "TEST_ROLE_{{$timestamp}}",
+  "roleName": "测试角色",
+  "description": "用于测试的角色",
+  "status": 1,
+  "sort": 100,
+  "tenantId": "{{tenantId}}"
+}
+
+###
+@newRoleId = {{createRole.response.body.data}}
+
+### 3.5 更新角色
+PUT {{baseUrl}}/api/role/{{newRoleId}}
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{
+  "roleName": "测试角色-已更新",
+  "description": "更新后的描述"
+}
+
+### 3.6 分配权限给角色
+PUT {{baseUrl}}/api/role/{{newRoleId}}/permissions
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+[1, 2, 3, 4, 5]
+
+### 3.7 查询角色的权限列表
+GET {{baseUrl}}/api/role/{{newRoleId}}/permissions
+Authorization: Bearer {{accessToken}}
+
+### 3.8 查询用户的角色
+GET {{baseUrl}}/api/role/user/1
+Authorization: Bearer {{accessToken}}
+
+### 3.9 分配角色给用户
+PUT {{baseUrl}}/api/role/user/1
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+[1, 2]
+
+### 3.10 删除角色
+DELETE {{baseUrl}}/api/role/{{newRoleId}}
+Authorization: Bearer {{accessToken}}
+
+### ===== 四、权限管理接口测试 =====
+
+### 4.1 查询所有权限
+GET {{baseUrl}}/api/permission/all
+Authorization: Bearer {{accessToken}}
+
+### 4.2 按类型查询权限 (1-菜单 2-按钮 3-API)
+GET {{baseUrl}}/api/permission/type/1
+Authorization: Bearer {{accessToken}}
+
+### 4.3 查询用户权限列表
+GET {{baseUrl}}/api/permission/user/1
+Authorization: Bearer {{accessToken}}
+
+### 4.4 查询用户权限编码
+GET {{baseUrl}}/api/permission/user/1/codes
+Authorization: Bearer {{accessToken}}
+
+### 4.5 检查用户权限
+GET {{baseUrl}}/api/permission/check/1/user:read
+Authorization: Bearer {{accessToken}}
+
+### ===== 五、菜单管理接口测试 =====
+
+### 5.1 查询菜单树
+GET {{baseUrl}}/api/menu/tree
+Authorization: Bearer {{accessToken}}
+
+### 5.2 查询用户菜单树
+GET {{baseUrl}}/api/menu/user/1
+Authorization: Bearer {{accessToken}}
+
+### 5.3 查询所有菜单（平铺）
+GET {{baseUrl}}/api/menu/list
+Authorization: Bearer {{accessToken}}
+
+### 5.4 查询菜单详情
+GET {{baseUrl}}/api/menu/1
+Authorization: Bearer {{accessToken}}
+
+### 5.5 创建菜单
+# @name createMenu
+POST {{baseUrl}}/api/menu
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{
+  "menuCode": "TEST_MENU_{{$timestamp}}",
+  "menuName": "测试菜单",
+  "parentId": 0,
+  "menuType": 2,
+  "path": "/test",
+  "component": "TestComponent",
+  "icon": "test",
+  "sort": 100,
+  "visible": 1,
+  "status": 1,
+  "permission": "test:view"
+}
+
+###
+@newMenuId = {{createMenu.response.body.data}}
+
+### 5.6 更新菜单
+PUT {{baseUrl}}/api/menu/{{newMenuId}}
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{
+  "menuName": "测试菜单-已更新",
+  "sort": 200
+}
+
+### 5.7 查询子菜单
+GET {{baseUrl}}/api/menu/children/0
+Authorization: Bearer {{accessToken}}
+
+### 5.8 删除菜单
+DELETE {{baseUrl}}/api/menu/{{newMenuId}}
+Authorization: Bearer {{accessToken}}
+
+### ===== 六、错误场景测试 =====
+
+### 6.1 未登录访问
+GET {{baseUrl}}/api/user/list
+
+### 6.2 无效Token
+GET {{baseUrl}}/api/user/list
+Authorization: Bearer invalid_token_here
+
+### 6.3 错误的登录信息
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "wronguser",
+  "password": "wrongpass",
+  "tenantId": "{{tenantId}}"
+}
+
+### 6.4 重复用户名
+POST {{baseUrl}}/api/user
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "test123",
+  "tenantId": "{{tenantId}}"
+}
+

@@ -1,0 +1,601 @@
+# Auth Boot Starter - Cursor AI 编码规则
+
+## 项目信息
+- 项目名称: auth-boot-starter (基础框架 + 认证授权)
+- 技术栈: Spring Boot 3.5.7, Java 17, MyBatis Plus, Redis, MySQL
+- 架构模式: Maven多模块项目
+- 完整编码规范: 参考 `docs/10-编码规范.md`
+
+## 核心原则
+1. 遵循阿里巴巴Java开发手册
+2. 代码简洁、可读、可维护
+3. 见名知义，统一风格
+4. 安全第一，性能优先
+
+---
+
+## 命名规范
+
+### 包名
+- 全小写，单词用点号分隔: `cn.zhangziming.auth.common.exception`
+- 不使用下划线或大写字母
+
+### 类名 (大驼峰)
+- Controller: `UserController`
+- Service接口: `IUserService` 或 `UserService`
+- Service实现: `UserServiceImpl`
+- Mapper: `UserMapper`
+- Entity: `User`, `Role`
+- DTO: `UserDTO`, `LoginDTO`
+- VO: `UserVO`
+- Request: `LoginRequest`
+- Response: `TokenResponse`
+- Exception: `BusinessException`
+- Utils: `StringUtil`
+- Config: `RedisConfig`
+- Constant: `CacheConstant`
+
+### 方法名 (小驼峰)
+- 保存: `saveUser()`, `insertUser()`
+- 删除: `deleteUser()`, `removeUser()`
+- 更新: `updateUser()`, `modifyUser()`
+- 查询单个: `getUser()`, `getUserById()`
+- 查询列表: `listUsers()`, `queryUsers()`
+- 判断: `isAdmin()`, `hasPermission()`
+- 验证: `validateToken()`, `checkPermission()`
+- 转换: `convertToJson()`, `parseToObject()`
+
+### 变量名 (小驼峰)
+```java
+private String username;
+private Long userId;
+private List<User> userList;
+private Map<String, Object> dataMap;
+private boolean isDeleted;
+private boolean hasPermission;
+```
+
+### 常量名 (全大写+下划线)
+```java
+public static final String DEFAULT_CHARSET = "UTF-8";
+public static final int MAX_PAGE_SIZE = 100;
+public static final long TOKEN_EXPIRE_TIME = 7200L;
+```
+
+---
+
+## 代码格式
+
+### 基本规则
+- 缩进: 4个空格 (不使用Tab)
+- 单行长度: 不超过120字符
+- 大括号: K&R风格 (左括号不换行)
+- 空格: 关键字与括号、运算符左右都要有空格
+
+### 示例
+```java
+// ✅ 正确
+if (condition) {
+    doSomething();
+} else {
+    doOtherThing();
+}
+
+// ✅ 正确
+public void method(String arg1, String arg2) {
+    int result = a + b;
+}
+```
+
+---
+
+## 注释规范
+
+### 类注释
+```java
+/**
+ * 用户服务类
+ * 
+ * <p>提供用户的增删改查等基础功能
+ * 
+ * @author zhangziming
+ * @since 1.0.0
+ */
+public class UserService {
+}
+```
+
+### 方法注释
+```java
+/**
+ * 保存用户信息
+ * 
+ * @param user 用户对象，不能为null
+ * @return 保存后的用户ID
+ * @throws BusinessException 当用户名重复时抛出
+ */
+public Long saveUser(User user) {
+}
+```
+
+### 字段注释
+```java
+/**
+ * 用户ID
+ */
+private Long id;
+
+/**
+ * 用户状态
+ * 0-禁用 1-正常 2-锁定
+ */
+private Integer status;
+```
+
+---
+
+## 编程规约
+
+### 1. 常量定义
+```java
+// ✅ 正确: 定义常量
+public static final String USER_CACHE_PREFIX = "user:";
+
+// ❌ 错误: 魔法值
+userCache.set("user:" + userId, user);
+```
+
+### 2. 集合处理
+```java
+// ✅ 正确: 使用isEmpty
+if (CollectionUtils.isEmpty(list)) { }
+
+// ❌ 错误: 使用size() == 0
+if (list.size() == 0) { }
+
+// ✅ 正确: 指定初始容量
+List<User> userList = new ArrayList<>(100);
+```
+
+### 3. 字符串处理
+```java
+// ✅ 正确: 常量在前
+if ("admin".equals(username)) { }
+
+// ❌ 错误: 可能空指针
+if (username.equals("admin")) { }
+
+// ✅ 正确: 使用StringBuilder
+StringBuilder sb = new StringBuilder();
+for (String item : list) {
+    sb.append(item).append(",");
+}
+```
+
+### 4. 空值处理
+```java
+// ✅ 正确: 返回空集合
+public List<User> listUsers() {
+    List<User> users = userMapper.selectList();
+    return users != null ? users : Collections.emptyList();
+}
+
+// ❌ 错误: 返回null
+public List<User> listUsers() {
+    return userMapper.selectList();
+}
+
+// ✅ 正确: 使用Optional
+public Optional<User> getUser(Long id) {
+    return Optional.ofNullable(userMapper.selectById(id));
+}
+```
+
+### 5. 条件判断优化
+```java
+// ✅ 正确: 提前返回，减少嵌套
+public void process(User user) {
+    if (user == null) {
+        return;
+    }
+    if (StringUtils.isBlank(user.getUsername())) {
+        return;
+    }
+    // 正常处理
+    doProcess(user);
+}
+
+// ❌ 错误: 多层嵌套
+public void process(User user) {
+    if (user != null) {
+        if (StringUtils.isNotBlank(user.getUsername())) {
+            // 处理
+        }
+    }
+}
+```
+
+---
+
+## 异常处理
+
+### 异常分类
+```java
+// 业务异常 - 可预期的异常
+public class BusinessException extends RuntimeException {
+    private Integer code;
+    // ...
+}
+
+// 系统异常 - 不可预期的异常
+public class SystemException extends RuntimeException {
+    // ...
+}
+```
+
+### 异常使用
+```java
+// ✅ 正确: 抛出具体异常
+if (userId == null) {
+    throw new BusinessException("用户ID不能为空");
+}
+
+// ✅ 正确: 记录日志或重新抛出
+try {
+    doSomething();
+} catch (Exception e) {
+    log.error("操作失败", e);
+    throw new SystemException("系统异常", e);
+}
+
+// ❌ 错误: 吞掉异常
+try {
+    doSomething();
+} catch (Exception e) {
+    // 什么都不做
+}
+```
+
+### 全局异常处理
+```java
+@RestControllerAdvice
+public class GlobalExceptionHandler {
+    
+    @ExceptionHandler(BusinessException.class)
+    public Result<?> handleBusinessException(BusinessException e) {
+        log.warn("业务异常: {}", e.getMessage());
+        return Result.error(e.getCode(), e.getMessage());
+    }
+    
+    @ExceptionHandler(Exception.class)
+    public Result<?> handleException(Exception e) {
+        log.error("系统异常", e);
+        return Result.error(500, "系统异常，请稍后重试");
+    }
+}
+```
+
+---
+
+## 日志规范
+
+### 日志级别
+- ERROR: 错误信息 (系统异常、业务异常)
+- WARN: 警告信息 (参数不合法、降级处理)
+- INFO: 重要信息 (启动信息、关键业务操作)
+- DEBUG: 调试信息 (开发调试)
+
+### 日志使用
+```java
+@Slf4j
+public class UserService {
+    
+    public void saveUser(User user) {
+        // ✅ 正确: 使用占位符
+        log.info("保存用户，username={}, email={}", 
+                user.getUsername(), user.getEmail());
+        
+        // ❌ 错误: 使用字符串拼接
+        log.info("保存用户，username=" + user.getUsername());
+        
+        // ✅ 正确: 异常日志包含堆栈
+        try {
+            userMapper.insert(user);
+        } catch (Exception e) {
+            log.error("保存用户失败，userId={}", user.getId(), e);
+        }
+        
+        // ✅ 正确: 敏感信息脱敏
+        log.info("用户登录，username={}, password={}", 
+                user.getUsername(), "******");
+    }
+}
+```
+
+---
+
+## 数据库规范
+
+### 表命名
+- 全小写，下划线分隔: `sys_user`, `sys_role`
+- 不使用MySQL保留字
+
+### 字段命名
+- 全小写，下划线分隔: `username`, `create_time`
+- 主键使用 `id`
+- 布尔字段使用 `is_` 前缀: `is_deleted`, `is_enabled`
+
+### 索引命名
+- 唯一索引: `uk_字段名` → `uk_username`
+- 普通索引: `idx_字段名` → `idx_create_time`
+- 联合索引: `idx_字段1_字段2` → `idx_username_status`
+
+### SQL编写
+```java
+// ✅ 正确: 使用参数化查询
+@Select("SELECT * FROM sys_user WHERE username = #{username}")
+User selectByUsername(@Param("username") String username);
+
+// ❌ 错误: SQL拼接 (有注入风险)
+String sql = "SELECT * FROM sys_user WHERE username = '" + username + "'";
+```
+
+---
+
+## 安全规范
+
+### 1. 输入验证
+```java
+public class UserDTO {
+    @NotBlank(message = "用户名不能为空")
+    @Length(min = 3, max = 20, message = "用户名长度为3-20个字符")
+    @Pattern(regexp = "^[a-zA-Z0-9_]+$")
+    private String username;
+    
+    @NotBlank(message = "密码不能为空")
+    @Length(min = 6, max = 20)
+    private String password;
+}
+
+@PostMapping("/register")
+public Result<Void> register(@Valid @RequestBody UserDTO userDTO) {
+    // @Valid会自动验证
+}
+```
+
+### 2. 密码处理
+```java
+// ✅ 正确: 使用BCrypt加密
+String encryptedPassword = passwordEncoder.encode(rawPassword);
+
+// ❌ 错误: 明文存储
+user.setPassword(rawPassword);
+
+// ❌ 错误: 使用MD5 (不安全)
+String md5Password = DigestUtils.md5Hex(password);
+```
+
+### 3. SQL注入防护
+```java
+// ✅ 正确: 参数化查询
+@Select("SELECT * FROM sys_user WHERE username = #{username}")
+
+// ❌ 错误: 字符串拼接
+@Select("SELECT * FROM sys_user WHERE username = '${username}'")
+```
+
+---
+
+## 统一响应和异常
+
+### 统一响应体
+```java
+@Data
+public class Result<T> {
+    private Integer code;
+    private String message;
+    private T data;
+    private Long timestamp;
+    
+    public static <T> Result<T> success(T data) {
+        Result<T> result = new Result<>();
+        result.setCode(200);
+        result.setMessage("success");
+        result.setData(data);
+        result.setTimestamp(System.currentTimeMillis());
+        return result;
+    }
+    
+    public static <T> Result<T> error(Integer code, String message) {
+        Result<T> result = new Result<>();
+        result.setCode(code);
+        result.setMessage(message);
+        result.setTimestamp(System.currentTimeMillis());
+        return result;
+    }
+}
+```
+
+### Controller示例
+```java
+@RestController
+@RequestMapping("/api/user")
+public class UserController {
+    
+    @GetMapping("/{id}")
+    public Result<UserVO> getUser(@PathVariable Long id) {
+        UserVO user = userService.getUser(id);
+        return Result.success(user);
+    }
+    
+    @PostMapping
+    public Result<Long> saveUser(@Valid @RequestBody UserDTO userDTO) {
+        Long userId = userService.saveUser(userDTO);
+        return Result.success(userId);
+    }
+}
+```
+
+---
+
+## 单元测试
+
+### 测试类命名
+```java
+// 测试类以Test结尾
+public class UserServiceTest {
+    
+    // 测试方法命名清晰
+    @Test
+    public void testSaveUser_Success() { }
+    
+    @Test
+    public void testSaveUser_WhenUsernameExists_ShouldThrowException() { }
+}
+```
+
+### 测试规范
+```java
+@SpringBootTest
+public class UserServiceTest {
+    
+    @Autowired
+    private UserService userService;
+    
+    @MockBean
+    private UserMapper userMapper;
+    
+    @Test
+    public void testSaveUser_Success() {
+        // Given (准备测试数据)
+        User user = new User();
+        user.setUsername("test");
+        when(userMapper.insert(any())).thenReturn(1);
+        
+        // When (执行测试)
+        Long userId = userService.saveUser(user);
+        
+        // Then (验证结果)
+        assertNotNull(userId);
+        verify(userMapper, times(1)).insert(any());
+    }
+}
+```
+
+### 覆盖率要求
+- 单元测试覆盖率: **80%以上**
+- 核心业务逻辑: **100%覆盖**
+
+---
+
+## 项目特定规范
+
+### 1. 基础实体继承
+```java
+@Data
+public class BaseEntity {
+    @TableId(type = IdType.AUTO)
+    private Long id;
+    
+    @TableField(fill = FieldFill.INSERT)
+    private LocalDateTime createTime;
+    
+    @TableField(fill = FieldFill.INSERT)
+    private Long createBy;
+    
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private LocalDateTime updateTime;
+    
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private Long updateBy;
+    
+    @TableLogic
+    private Integer isDeleted;
+}
+
+// 实体类继承
+public class User extends BaseEntity {
+    private String username;
+    private String password;
+    // ...
+}
+```
+
+### 2. 分页查询
+```java
+@Data
+public class PageRequest {
+    @Min(1)
+    private Integer pageNum = 1;
+    
+    @Min(1)
+    @Max(100)
+    private Integer pageSize = 10;
+}
+
+@Data
+public class PageResult<T> {
+    private Long total;
+    private Integer pageNum;
+    private Integer pageSize;
+    private List<T> list;
+}
+
+// 使用
+@GetMapping("/list")
+public Result<PageResult<UserVO>> listUsers(PageRequest pageRequest) {
+    PageResult<UserVO> result = userService.listUsers(pageRequest);
+    return Result.success(result);
+}
+```
+
+### 3. 认证授权注解
+```java
+// 需要登录
+@RequireLogin
+@GetMapping("/info")
+public Result<UserVO> getUserInfo() {
+    UserInfo user = UserContext.getCurrentUser();
+    return Result.success(user);
+}
+
+// 需要权限
+@RequirePermission("user:delete")
+@DeleteMapping("/{id}")
+public Result<Void> deleteUser(@PathVariable Long id) {
+    userService.deleteUser(id);
+    return Result.success();
+}
+
+// 需要角色
+@RequireRole("ADMIN")
+@PostMapping("/admin/config")
+public Result<Void> updateConfig() {
+    return Result.success();
+}
+```
+
+---
+
+## 代码生成建议
+
+当我生成代码时，请确保:
+1. ✅ 所有命名符合规范
+2. ✅ 包含完整的JavaDoc注释
+3. ✅ 使用统一的响应体Result
+4. ✅ 使用@Valid进行参数校验
+5. ✅ 异常处理规范
+6. ✅ 日志使用占位符
+7. ✅ 避免魔法值，使用常量
+8. ✅ 返回空集合而不是null
+9. ✅ 代码格式化正确
+10. ✅ 包含必要的单元测试
+
+---
+
+## 参考文档
+- 完整编码规范: `docs/10-编码规范.md`
+- 项目总体规划: `docs/00-总体规划.md`
+- 架构设计: `docs/02-架构设计.md`
+- API接口文档: `docs/04-API接口文档.md`
+

@@ -1,0 +1,363 @@
+-- =========================================
+-- Auth Boot Starter 数据库初始化脚本
+-- 版本: 1.0.0
+-- 创建时间: 2024-10-29
+-- =========================================
+
+-- 创建数据库
+CREATE DATABASE IF NOT EXISTS `auth_boot` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+USE `auth_boot`;
+
+-- =========================================
+-- 1. 用户模块
+-- =========================================
+
+-- 用户表
+CREATE TABLE `sys_user` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '用户ID',
+  `username` VARCHAR(64) NOT NULL COMMENT '用户名',
+  `password` VARCHAR(128) NOT NULL COMMENT '密码(BCrypt加密)',
+  `nickname` VARCHAR(64) DEFAULT NULL COMMENT '昵称',
+  `email` VARCHAR(128) DEFAULT NULL COMMENT '邮箱',
+  `phone` VARCHAR(20) DEFAULT NULL COMMENT '手机号',
+  `avatar` VARCHAR(255) DEFAULT NULL COMMENT '头像URL',
+  `gender` TINYINT DEFAULT 0 COMMENT '性别(0:未知 1:男 2:女)',
+  `status` TINYINT NOT NULL DEFAULT 1 COMMENT '状态(0:禁用 1:正常 2:锁定)',
+  `user_type` TINYINT DEFAULT 1 COMMENT '用户类型(1:普通用户 2:管理员 3:超级管理员)',
+  `tenant_id` VARCHAR(32) NOT NULL COMMENT '租户ID',
+  `last_login_time` DATETIME DEFAULT NULL COMMENT '最后登录时间',
+  `last_login_ip` VARCHAR(64) DEFAULT NULL COMMENT '最后登录IP',
+  `password_update_time` DATETIME DEFAULT NULL COMMENT '密码修改时间',
+  `is_deleted` TINYINT NOT NULL DEFAULT 0 COMMENT '删除标志(0:未删除 1:已删除)',
+  `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `create_by` BIGINT DEFAULT NULL COMMENT '创建人',
+  `update_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `update_by` BIGINT DEFAULT NULL COMMENT '更新人',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_username_tenant` (`username`, `tenant_id`),
+  UNIQUE KEY `uk_email_tenant` (`email`, `tenant_id`),
+  UNIQUE KEY `uk_phone_tenant` (`phone`, `tenant_id`),
+  KEY `idx_tenant_id` (`tenant_id`),
+  KEY `idx_status` (`status`),
+  KEY `idx_create_time` (`create_time`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='用户表';
+
+-- 用户详细信息表
+CREATE TABLE `sys_user_detail` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `user_id` BIGINT NOT NULL COMMENT '用户ID',
+  `real_name` VARCHAR(64) DEFAULT NULL COMMENT '真实姓名',
+  `id_card` VARCHAR(32) DEFAULT NULL COMMENT '身份证号',
+  `birthday` DATE DEFAULT NULL COMMENT '生日',
+  `province` VARCHAR(32) DEFAULT NULL COMMENT '省份',
+  `city` VARCHAR(32) DEFAULT NULL COMMENT '城市',
+  `district` VARCHAR(32) DEFAULT NULL COMMENT '区县',
+  `address` VARCHAR(255) DEFAULT NULL COMMENT '详细地址',
+  `remark` VARCHAR(500) DEFAULT NULL COMMENT '备注',
+  `extra_info` JSON DEFAULT NULL COMMENT '扩展信息(JSON)',
+  `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_id` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='用户详细信息表';
+
+-- =========================================
+-- 2. 角色权限模块
+-- =========================================
+
+-- 角色表
+CREATE TABLE `sys_role` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '角色ID',
+  `role_code` VARCHAR(64) NOT NULL COMMENT '角色编码',
+  `role_name` VARCHAR(64) NOT NULL COMMENT '角色名称',
+  `role_level` INT DEFAULT 0 COMMENT '角色级别(数字越小权限越大)',
+  `data_scope` TINYINT DEFAULT 1 COMMENT '数据范围(1:全部 2:本部门及下级 3:本部门 4:仅本人 5:自定义)',
+  `status` TINYINT NOT NULL DEFAULT 1 COMMENT '状态(0:禁用 1:正常)',
+  `tenant_id` VARCHAR(32) NOT NULL COMMENT '租户ID',
+  `remark` VARCHAR(500) DEFAULT NULL COMMENT '备注',
+  `is_deleted` TINYINT NOT NULL DEFAULT 0 COMMENT '删除标志',
+  `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `create_by` BIGINT DEFAULT NULL COMMENT '创建人',
+  `update_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `update_by` BIGINT DEFAULT NULL COMMENT '更新人',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_role_code_tenant` (`role_code`, `tenant_id`),
+  KEY `idx_tenant_id` (`tenant_id`),
+  KEY `idx_status` (`status`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='角色表';
+
+-- 权限表
+CREATE TABLE `sys_permission` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '权限ID',
+  `permission_code` VARCHAR(128) NOT NULL COMMENT '权限编码(如: user:read)',
+  `permission_name` VARCHAR(64) NOT NULL COMMENT '权限名称',
+  `permission_type` TINYINT NOT NULL COMMENT '权限类型(1:菜单 2:按钮 3:API)',
+  `parent_id` BIGINT DEFAULT 0 COMMENT '父权限ID',
+  `resource_id` BIGINT DEFAULT NULL COMMENT '关联资源ID',
+  `tenant_id` VARCHAR(32) NOT NULL COMMENT '租户ID',
+  `status` TINYINT NOT NULL DEFAULT 1 COMMENT '状态',
+  `sort_order` INT DEFAULT 0 COMMENT '排序',
+  `remark` VARCHAR(500) DEFAULT NULL COMMENT '备注',
+  `is_deleted` TINYINT NOT NULL DEFAULT 0 COMMENT '删除标志',
+  `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `create_by` BIGINT DEFAULT NULL COMMENT '创建人',
+  `update_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `update_by` BIGINT DEFAULT NULL COMMENT '更新人',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_permission_code_tenant` (`permission_code`, `tenant_id`),
+  KEY `idx_parent_id` (`parent_id`),
+  KEY `idx_tenant_id` (`tenant_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='权限表';
+
+-- 用户角色关联表
+CREATE TABLE `sys_user_role` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `user_id` BIGINT NOT NULL COMMENT '用户ID',
+  `role_id` BIGINT NOT NULL COMMENT '角色ID',
+  `tenant_id` VARCHAR(32) NOT NULL COMMENT '租户ID',
+  `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `create_by` BIGINT DEFAULT NULL COMMENT '创建人',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_role` (`user_id`, `role_id`),
+  KEY `idx_user_id` (`user_id`),
+  KEY `idx_role_id` (`role_id`),
+  KEY `idx_tenant_id` (`tenant_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='用户角色关联表';
+
+-- 角色权限关联表
+CREATE TABLE `sys_role_permission` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `role_id` BIGINT NOT NULL COMMENT '角色ID',
+  `permission_id` BIGINT NOT NULL COMMENT '权限ID',
+  `tenant_id` VARCHAR(32) NOT NULL COMMENT '租户ID',
+  `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `create_by` BIGINT DEFAULT NULL COMMENT '创建人',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_role_permission` (`role_id`, `permission_id`),
+  KEY `idx_role_id` (`role_id`),
+  KEY `idx_permission_id` (`permission_id`),
+  KEY `idx_tenant_id` (`tenant_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='角色权限关联表';
+
+-- =========================================
+-- 3. 资源模块
+-- =========================================
+
+-- 菜单表
+CREATE TABLE `sys_menu` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '菜单ID',
+  `menu_name` VARCHAR(64) NOT NULL COMMENT '菜单名称',
+  `menu_code` VARCHAR(64) NOT NULL COMMENT '菜单编码',
+  `parent_id` BIGINT DEFAULT 0 COMMENT '父菜单ID',
+  `menu_type` TINYINT NOT NULL COMMENT '菜单类型(1:目录 2:菜单 3:按钮)',
+  `path` VARCHAR(255) DEFAULT NULL COMMENT '路由地址',
+  `component` VARCHAR(255) DEFAULT NULL COMMENT '组件路径',
+  `permission` VARCHAR(128) DEFAULT NULL COMMENT '权限标识',
+  `icon` VARCHAR(64) DEFAULT NULL COMMENT '图标',
+  `sort_order` INT DEFAULT 0 COMMENT '排序',
+  `visible` TINYINT DEFAULT 1 COMMENT '是否可见(0:否 1:是)',
+  `status` TINYINT NOT NULL DEFAULT 1 COMMENT '状态(0:禁用 1:正常)',
+  `tenant_id` VARCHAR(32) NOT NULL COMMENT '租户ID',
+  `is_external` TINYINT DEFAULT 0 COMMENT '是否外链(0:否 1:是)',
+  `keep_alive` TINYINT DEFAULT 0 COMMENT '是否缓存(0:否 1:是)',
+  `remark` VARCHAR(500) DEFAULT NULL COMMENT '备注',
+  `is_deleted` TINYINT NOT NULL DEFAULT 0 COMMENT '删除标志',
+  `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `create_by` BIGINT DEFAULT NULL COMMENT '创建人',
+  `update_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `update_by` BIGINT DEFAULT NULL COMMENT '更新人',
+  PRIMARY KEY (`id`),
+  KEY `idx_parent_id` (`parent_id`),
+  KEY `idx_tenant_id` (`tenant_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='菜单表';
+
+-- API接口表
+CREATE TABLE `sys_api` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT COMMENT 'API ID',
+  `api_name` VARCHAR(64) NOT NULL COMMENT 'API名称',
+  `api_code` VARCHAR(128) NOT NULL COMMENT 'API编码',
+  `api_path` VARCHAR(255) NOT NULL COMMENT 'API路径',
+  `api_method` VARCHAR(16) NOT NULL COMMENT '请求方法(GET/POST/PUT/DELETE)',
+  `api_category` VARCHAR(64) DEFAULT NULL COMMENT 'API分类',
+  `require_auth` TINYINT DEFAULT 1 COMMENT '是否需要认证(0:否 1:是)',
+  `status` TINYINT NOT NULL DEFAULT 1 COMMENT '状态',
+  `tenant_id` VARCHAR(32) NOT NULL COMMENT '租户ID',
+  `remark` VARCHAR(500) DEFAULT NULL COMMENT '备注',
+  `is_deleted` TINYINT NOT NULL DEFAULT 0 COMMENT '删除标志',
+  `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `create_by` BIGINT DEFAULT NULL COMMENT '创建人',
+  `update_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `update_by` BIGINT DEFAULT NULL COMMENT '更新人',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_api_path_method_tenant` (`api_path`, `api_method`, `tenant_id`),
+  KEY `idx_tenant_id` (`tenant_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='API接口表';
+
+-- =========================================
+-- 4. 租户模块
+-- =========================================
+
+-- 租户表
+CREATE TABLE `sys_tenant` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '租户ID',
+  `tenant_code` VARCHAR(32) NOT NULL COMMENT '租户编码',
+  `tenant_name` VARCHAR(64) NOT NULL COMMENT '租户名称',
+  `contact_name` VARCHAR(64) DEFAULT NULL COMMENT '联系人',
+  `contact_phone` VARCHAR(20) DEFAULT NULL COMMENT '联系电话',
+  `contact_email` VARCHAR(128) DEFAULT NULL COMMENT '联系邮箱',
+  `expire_time` DATETIME DEFAULT NULL COMMENT '过期时间',
+  `account_limit` INT DEFAULT -1 COMMENT '账号数量限制(-1:不限制)',
+  `status` TINYINT NOT NULL DEFAULT 1 COMMENT '状态(0:禁用 1:正常 2:过期)',
+  `logo` VARCHAR(255) DEFAULT NULL COMMENT 'Logo URL',
+  `domain` VARCHAR(128) DEFAULT NULL COMMENT '域名',
+  `remark` VARCHAR(500) DEFAULT NULL COMMENT '备注',
+  `is_deleted` TINYINT NOT NULL DEFAULT 0 COMMENT '删除标志',
+  `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `create_by` BIGINT DEFAULT NULL COMMENT '创建人',
+  `update_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `update_by` BIGINT DEFAULT NULL COMMENT '更新人',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_tenant_code` (`tenant_code`),
+  KEY `idx_status` (`status`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='租户表';
+
+-- 租户配置表
+CREATE TABLE `sys_tenant_config` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `tenant_id` VARCHAR(32) NOT NULL COMMENT '租户ID',
+  `config_key` VARCHAR(64) NOT NULL COMMENT '配置键',
+  `config_value` TEXT DEFAULT NULL COMMENT '配置值',
+  `config_type` VARCHAR(32) DEFAULT NULL COMMENT '配置类型',
+  `remark` VARCHAR(500) DEFAULT NULL COMMENT '备注',
+  `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_tenant_config_key` (`tenant_id`, `config_key`),
+  KEY `idx_tenant_id` (`tenant_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='租户配置表';
+
+-- =========================================
+-- 5. OAuth模块
+-- =========================================
+
+-- OAuth客户端表
+CREATE TABLE `oauth_client` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '客户端ID',
+  `client_id` VARCHAR(64) NOT NULL COMMENT '客户端标识',
+  `client_secret` VARCHAR(255) NOT NULL COMMENT '客户端密钥',
+  `client_name` VARCHAR(64) NOT NULL COMMENT '客户端名称',
+  `resource_ids` VARCHAR(255) DEFAULT NULL COMMENT '资源ID集合',
+  `scope` VARCHAR(255) DEFAULT 'all' COMMENT '授权范围',
+  `authorized_grant_types` VARCHAR(255) NOT NULL COMMENT '授权类型(authorization_code,password,refresh_token,client_credentials)',
+  `web_server_redirect_uri` VARCHAR(512) DEFAULT NULL COMMENT '回调地址',
+  `authorities` VARCHAR(255) DEFAULT NULL COMMENT '权限',
+  `access_token_validity` INT DEFAULT 7200 COMMENT 'AccessToken有效期(秒)',
+  `refresh_token_validity` INT DEFAULT 604800 COMMENT 'RefreshToken有效期(秒)',
+  `additional_information` JSON DEFAULT NULL COMMENT '附加信息',
+  `auto_approve` TINYINT DEFAULT 0 COMMENT '是否自动授权',
+  `tenant_id` VARCHAR(32) NOT NULL COMMENT '租户ID',
+  `status` TINYINT NOT NULL DEFAULT 1 COMMENT '状态',
+  `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `create_by` BIGINT DEFAULT NULL COMMENT '创建人',
+  `update_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `update_by` BIGINT DEFAULT NULL COMMENT '更新人',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_client_id` (`client_id`),
+  KEY `idx_tenant_id` (`tenant_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='OAuth客户端表';
+
+-- =========================================
+-- 6. 日志模块
+-- =========================================
+
+-- 登录日志表
+CREATE TABLE `sys_login_log` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '日志ID',
+  `username` VARCHAR(64) DEFAULT NULL COMMENT '用户名',
+  `user_id` BIGINT DEFAULT NULL COMMENT '用户ID',
+  `tenant_id` VARCHAR(32) DEFAULT NULL COMMENT '租户ID',
+  `login_type` TINYINT DEFAULT 1 COMMENT '登录类型(1:账号密码 2:手机验证码 3:第三方)',
+  `ip_address` VARCHAR(64) DEFAULT NULL COMMENT 'IP地址',
+  `location` VARCHAR(128) DEFAULT NULL COMMENT '登录地点',
+  `browser` VARCHAR(64) DEFAULT NULL COMMENT '浏览器',
+  `os` VARCHAR(64) DEFAULT NULL COMMENT '操作系统',
+  `device` VARCHAR(64) DEFAULT NULL COMMENT '设备类型',
+  `status` TINYINT NOT NULL COMMENT '登录状态(0:失败 1:成功)',
+  `message` VARCHAR(255) DEFAULT NULL COMMENT '提示消息',
+  `login_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '登录时间',
+  PRIMARY KEY (`id`),
+  KEY `idx_user_id` (`user_id`),
+  KEY `idx_tenant_id` (`tenant_id`),
+  KEY `idx_login_time` (`login_time`),
+  KEY `idx_status` (`status`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='登录日志表';
+
+-- 操作日志表
+CREATE TABLE `sys_operation_log` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT COMMENT '日志ID',
+  `user_id` BIGINT DEFAULT NULL COMMENT '用户ID',
+  `username` VARCHAR(64) DEFAULT NULL COMMENT '用户名',
+  `tenant_id` VARCHAR(32) DEFAULT NULL COMMENT '租户ID',
+  `module` VARCHAR(64) DEFAULT NULL COMMENT '模块名称',
+  `operation` VARCHAR(64) DEFAULT NULL COMMENT '操作类型',
+  `method` VARCHAR(255) DEFAULT NULL COMMENT '请求方法',
+  `request_url` VARCHAR(512) DEFAULT NULL COMMENT '请求URL',
+  `request_method` VARCHAR(16) DEFAULT NULL COMMENT '请求方式',
+  `request_params` TEXT DEFAULT NULL COMMENT '请求参数',
+  `response_result` TEXT DEFAULT NULL COMMENT '响应结果',
+  `ip_address` VARCHAR(64) DEFAULT NULL COMMENT 'IP地址',
+  `location` VARCHAR(128) DEFAULT NULL COMMENT '操作地点',
+  `status` TINYINT DEFAULT 1 COMMENT '状态(0:失败 1:成功)',
+  `error_msg` TEXT DEFAULT NULL COMMENT '错误消息',
+  `execute_time` INT DEFAULT 0 COMMENT '执行时间(毫秒)',
+  `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '操作时间',
+  PRIMARY KEY (`id`),
+  KEY `idx_user_id` (`user_id`),
+  KEY `idx_tenant_id` (`tenant_id`),
+  KEY `idx_create_time` (`create_time`),
+  KEY `idx_module` (`module`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='操作日志表';
+
+-- =========================================
+-- 7. 初始化数据
+-- =========================================
+
+-- 默认租户
+INSERT INTO `sys_tenant` (`id`, `tenant_code`, `tenant_name`, `status`, `create_time`) 
+VALUES (1, 'DEFAULT', '默认租户', 1, NOW());
+
+-- 超级管理员 (密码: admin123)
+INSERT INTO `sys_user` (`id`, `username`, `password`, `nickname`, `status`, `user_type`, `tenant_id`, `create_time`) 
+VALUES (1, 'admin', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iKTVKIUi', '超级管理员', 1, 3, 'DEFAULT', NOW());
+
+-- 默认角色
+INSERT INTO `sys_role` (`id`, `role_code`, `role_name`, `role_level`, `tenant_id`, `create_time`) 
+VALUES 
+(1, 'SUPER_ADMIN', '超级管理员', 0, 'DEFAULT', NOW()),
+(2, 'ADMIN', '管理员', 1, 'DEFAULT', NOW()),
+(3, 'USER', '普通用户', 2, 'DEFAULT', NOW());
+
+-- 用户角色关联
+INSERT INTO `sys_user_role` (`user_id`, `role_id`, `tenant_id`, `create_time`) 
+VALUES (1, 1, 'DEFAULT', NOW());
+
+-- 默认权限
+INSERT INTO `sys_permission` (`permission_code`, `permission_name`, `permission_type`, `tenant_id`, `create_time`) 
+VALUES 
+('*:*:*', '所有权限', 1, 'DEFAULT', NOW()),
+('user:read', '用户查询', 2, 'DEFAULT', NOW()),
+('user:write', '用户编辑', 2, 'DEFAULT', NOW()),
+('role:read', '角色查询', 2, 'DEFAULT', NOW()),
+('role:write', '角色编辑', 2, 'DEFAULT', NOW());
+
+-- OAuth默认客户端
+INSERT INTO `oauth_client` (`client_id`, `client_secret`, `client_name`, `authorized_grant_types`, `scope`, `tenant_id`, `create_time`) 
+VALUES 
+('web-client', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iKTVKIUi', 'Web客户端', 'authorization_code,refresh_token', 'all', 'DEFAULT', NOW()),
+('mobile-client', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iKTVKIUi', '移动客户端', 'password,refresh_token', 'all', 'DEFAULT', NOW()),
+('service-client', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iKTVKIUi', '服务客户端', 'client_credentials', 'all', 'DEFAULT', NOW());
+
+-- 初始化完成
+SELECT '数据库初始化完成！' AS message;
+SELECT CONCAT('默认管理员: admin / admin123') AS info;

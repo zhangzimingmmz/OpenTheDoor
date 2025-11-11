@@ -1,0 +1,104 @@
+# =========================================
+# Auth Boot Starter Server 配置示例
+# 这是一个示例配置，实际使用时需要根据环境调整
+# =========================================
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: auth-boot-server
+  
+  # 允许Bean覆盖（用于覆盖MyBatis Plus的ddlApplicationRunner）
+  main:
+    allow-bean-definition-overriding: true
+  
+  # 禁用数据库初始化依赖检查
+  sql:
+    init:
+      mode: never
+  
+  # 禁用JDBC Client自动配置（这个会创建ddlApplicationRunner）
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+      - org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration
+      - org.springframework.boot.autoconfigure.jdbc.JdbcClientAutoConfiguration
+      - org.springframework.boot.autoconfigure.data.jdbc.JdbcRepositoriesAutoConfiguration
+  
+  # 数据源配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/auth_boot?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: echowave@123
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+  
+  # Redis配置
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+      password: echowave@123
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+
+# MyBatis Plus配置
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: cn.zhangziming.auth.server.entity
+  # 禁用DDL自动执行
+  execute-ddl-scripts: false
+  global-config:
+    banner: false
+    # 禁用SQL Runner
+    enable-sql-runner: false
+    db-config:
+      id-type: AUTO
+      logic-delete-field: isDeleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
+# Auth Boot配置
+auth-boot:
+  # Web模块
+  web:
+    enabled: true
+    log:
+      enabled: true
+  
+  # MyBatis模块
+  mybatis:
+    enabled: true
+  
+  # Redis模块
+  redis:
+    enabled: true
+  
+  # Security模块
+  security:
+    enabled: true
+    jwt:
+      secret: auth-boot-starter-jwt-secret-key-please-change-in-production
+      expire-time: 7200        # 2小时
+      refresh-expire-time: 604800  # 7天
+      header: Authorization
+      prefix: "Bearer "
+
+# 日志配置
+logging:
+  level:
+    root: INFO
+    cn.zhangziming.auth: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%X{X-Trace-Id}] %-5level %logger{36} - %msg%n"
+
