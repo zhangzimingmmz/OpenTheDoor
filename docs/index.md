@@ -12,6 +12,7 @@
 | 专题 | 描述 | 状态 |
 |:---|:---|:---:|
 | **[☕ Java 语言基础](java-core/README.md)** | Java 核心语法、面向对象、泛型、反射、函数式编程、集合框架 | ✅ 已完成 |
+| **[🧵 Java 并发编程](java-core/07-Java并发编程.md)** | 线程、同步、锁、线程池、并发集合、CAS、设计模式、性能优化 | ✅ 已完成 |
 | **[🔐 认证授权](auth/01-认证授权基础.md)** | Spring Security、OAuth2、JWT、SSO 完整教程 | ✅ 已完成 |
 | **[🚀 Nomad 容器编排](cloud-native/README.md)** | 轻量级编排、Tailscale 集成、AI 算力平台实战 | ✅ 已完成 |
 | **[📝 博客搭建](devops/01-博客搭建指南.md)** | MkDocs + GitHub Pages 搭建技术博客 | ✅ 已完成 |
@@ -67,24 +68,31 @@
 
 ---
 
-### 🧵 Java 并发编程 🔵 规划中
+### 🧵 Java 并发编程 🟢 已完成
+
+[:material-book-open-variant: 完整教程](java-core/07-Java并发编程.md){ .md-button .md-button--primary }
 
 **📚 核心内容**
 
-- **线程基础** - Thread、Runnable、Callable、FutureTask
-- **线程安全** - synchronized、volatile、final、ThreadLocal
-- **显式锁** - Lock、ReentrantLock、ReadWriteLock、StampedLock
-- **AQS 框架** - AbstractQueuedSynchronizer 源码分析
-- **并发工具** - CountDownLatch、CyclicBarrier、Semaphore
-- **线程池** - ThreadPoolExecutor、ScheduledThreadPoolExecutor
-- **并发容器** - ConcurrentHashMap、BlockingQueue
-- **虚拟线程** - Java 21 Virtual Threads
+- **[线程基础](java-core/07-01-线程基础.md)** ✅ - Thread、Runnable、Callable、线程生命周期
+- **[线程同步与内存模型](java-core/07-02-线程同步与内存模型.md)** ✅ - synchronized、volatile、JMM、happens-before规则
+- **[锁机制](java-core/07-03-锁机制.md)** ✅ - ReentrantLock、ReadWriteLock、StampedLock
+- **[并发工具类](java-core/07-04-并发工具类.md)** ✅ - CountDownLatch、CyclicBarrier、Semaphore、Exchanger、Phaser
+- **[线程池](java-core/07-05-线程池.md)** ✅ - Executor框架、ThreadPoolExecutor源码、最佳实践
+- **[并发集合](java-core/07-06-并发集合.md)** ✅ - ConcurrentHashMap、BlockingQueue、CopyOnWriteArrayList
+- **[原子类与CAS](java-core/07-07-原子类与CAS.md)** ✅ - Atomic类、CAS原理、ABA问题、LongAdder
+- **[并发设计模式](java-core/07-08-并发设计模式.md)** ✅ - 生产者消费者、ThreadLocal、Future模式、不变模式
+- **[性能优化与最佳实践](java-core/07-09-性能优化与最佳实践.md)** ✅ - 性能调优、死锁/活锁/饥饿、生产环境最佳实践
 
 **🎯 核心要点**
 
-- 深入理解 Java 内存模型（JMM）
-- 掌握并发编程最佳实践
-- 能排查和解决并发问题
+- 深入理解 Java 内存模型（JMM）和 happens-before 规则
+- 掌握 synchronized、volatile、显式锁的使用场景
+- 理解线程池原理和最佳配置实践
+- 掌握 ConcurrentHashMap、BlockingQueue 等并发集合
+- 理解 CAS 原理和原子类的使用
+- 掌握并发设计模式和性能优化技巧
+- 能排查和解决死锁、活锁、饥饿等并发问题
 
 ---
 
@@ -330,9 +338,9 @@ Pod、Service、Deployment、ConfigMap、网络、存储、调度、高可用
 | 📈 维度 | 📊 数据 |
 |:---:|:---|
 | **知识模块** | 14 大类 70+ 小类 |
-| **已完成** | Java语言基础、Java集合框架、认证授权、Nomad、博客搭建 |
+| **已完成** | Java语言基础、Java集合框架、Java并发编程、认证授权、Nomad、博客搭建 |
 | **进行中** | Spring、容器技术、云原生工具 |
-| **总文档** | 20+ 篇，持续增加中 |
+| **总文档** | 30+ 篇，持续增加中 |
 
 ---
 
