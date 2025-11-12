@@ -21,6 +21,7 @@
         <module>java-functional</module>
         <module>java-new-features</module>
         <module>java-collections</module>
+        <module>java-concurrency-basics</module>
     </modules>
 
     <!-- 属性配置 (Properties) -->

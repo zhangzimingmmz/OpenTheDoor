@@ -282,7 +282,7 @@ public class ExceptionDemo {
         
         // try-with-resources：自动关闭资源
         System.out.println("\ntry-with-resources - 自动关闭:");
-        try (/* FileReader reader2 = new FileReader("test.txt") */) {
+        try (FileReader reader2 = new FileReader("test.txt") ) {
             System.out.println("资源会自动关闭");
         } catch (Exception e) {
             System.out.println("演示：" + e.getMessage());
