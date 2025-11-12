@@ -64,11 +64,11 @@
 - **线程同步** - synchronized、volatile、JMM、happens-before规则
 - **线程池** - Executor框架、ThreadPoolExecutor源码、最佳实践
 - **并发集合** - ConcurrentHashMap、BlockingQueue、CopyOnWriteArrayList
-- **锁机制** - ReentrantLock、ReadWriteLock（待补充）
-- **并发工具类** - CountDownLatch、CyclicBarrier（待补充）
-- **原子类与CAS** - Atomic类、CAS原理（待补充）
-- **并发设计模式** - 生产者消费者、ThreadLocal（待补充）
-- **性能优化** - 并发性能调优和最佳实践（待补充）
+- **锁机制** - ReentrantLock、ReadWriteLock、StampedLock
+- **并发工具类** - CountDownLatch、CyclicBarrier、Semaphore、Exchanger、Phaser
+- **原子类与CAS** - Atomic类、CAS原理、ABA问题、LongAdder
+- **并发设计模式** - 生产者消费者、ThreadLocal、Future模式、不变模式
+- **性能优化** - 性能调优、死锁/活锁/饥饿、生产环境最佳实践
 
 ---
 

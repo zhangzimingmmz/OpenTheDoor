@@ -74,6 +74,7 @@ nav:
     - 函数式编程: java-core/04-函数式编程.md
     - Java新版本特性: java-core/05-Java新版本特性.md
     - Java集合框架: java-core/06-Java集合框架.md
+    - Java并发编程: java-core/07-Java并发编程.md
   - 认证授权:
     - 概述: auth/README.md
     - 认证授权基础: auth/01-认证授权基础.md
