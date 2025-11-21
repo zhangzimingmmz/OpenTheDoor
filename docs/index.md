@@ -422,7 +422,7 @@ Pod、Service、Deployment、ConfigMap、网络、存储、调度、高可用
 <div align="center">
 
 [:material-book-open-variant: 开始学习](java-core/README.md){ .md-button .md-button--primary }
-[:material-github: 在线阅读](https://zhangzimingmmz.github.io/OpenTheDoor/){ .md-button }
+[:material-github: 在线阅读](https://blog.zhangziming.cn/){ .md-button }
 [:material-message-text: 交流反馈](https://github.com/zhangzimingmmz/OpenTheDoor/issues){ .md-button }
 
 </div>
