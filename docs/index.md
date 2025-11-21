@@ -15,7 +15,9 @@
 | **[🧵 Java 并发编程](java-core/07-Java并发编程.md)** | 线程、同步、锁、线程池、并发集合、CAS、设计模式、性能优化 | ✅ 已完成 |
 | **[🔐 认证授权](auth/01-认证授权基础.md)** | Spring Security、OAuth2、JWT、SSO 完整教程 | ✅ 已完成 |
 | **[🚀 Nomad 容器编排](cloud-native/README.md)** | 轻量级编排、Tailscale 集成、AI 算力平台实战 | ✅ 已完成 |
+| **[📬 Kafka 消息队列](middleware/01-Kafka基础入门.md)** | Kafka 架构、核心概念、Spring Boot 集成实战 | ✅ 已完成 |
 | **[📝 博客搭建](devops/01-博客搭建指南.md)** | MkDocs + GitHub Pages 搭建技术博客 | ✅ 已完成 |
+| **[🐹 Go 语言系列](go/README.md)** | 专为 Java 开发者设计的 Go 语言学习路径 | ✅ 已完成 |
 
 ---
 
@@ -150,6 +152,32 @@
 
 ---
 
+---
+
+## 🐹 Go 语言系列
+
+!!! tip "⭐⭐⭐⭐⭐ 热门趋势 | 云原生时代的通用语言"
+
+### 📘 Go 语言学习路径 🟢 已完成
+
+[:material-book-open-variant: 完整导航](go/README.md){ .md-button .md-button--primary }
+
+**📚 核心内容**
+
+- **[快速入门](go/core/01-getting-started/README.md)** ✅ - 环境搭建、VS Code配置、Hello World
+- **[基础语法](go/core/02-basics/01-variables-types.md)** ✅ - 变量、控制流、函数、数据结构
+- **[进阶特性](go/core/03-intermediate/01-structs-interfaces.md)** ✅ - 接口、并发编程、错误处理
+- **[实战应用](go/core/05-practical/01-web-db.md)** ✅ - Web开发、数据库、RESTful API
+
+**🎯 核心亮点**
+
+- 专为 Java 开发者设计，包含详细的 **Java vs Go** 对比
+- 14 个完整的 **示例代码**，从 Hello World 到实战项目
+- 涵盖 **并发编程** (Goroutine, Channel) 核心特性
+- 包含 **Web 开发** 和 **数据库操作** 实战教程
+
+---
+
 ## 📊 二、数据结构与算法
 
 !!! tip "⭐⭐⭐⭐⭐ 面试必考 | 算法是程序的灵魂"
@@ -231,9 +259,25 @@ OSI 七层模型、TCP/IP 协议栈、TCP（三次握手、四次挥手、拥塞
 
 !!! tip "⭐⭐⭐⭐ 分布式基础 | 分布式系统的基础设施"
 
-### 📬 消息队列 🔵 规划中
+### 📬 消息队列 🟡 进行中
 
-- **Kafka** - 消息模型、高可用、性能优化
+[:material-book-open-variant: 完整教程](middleware/README.md){ .md-button .md-button--primary }
+
+**📚 核心内容**
+
+- **[Kafka 基础入门](middleware/01-Kafka基础入门.md)** ✅ - Kafka 简介、架构、安装部署、快速开始
+- **[Kafka 核心概念](middleware/02-Kafka核心概念.md)** ✅ - Topic、Partition、Producer、Consumer、Consumer Group
+- **[Kafka 实战应用](middleware/03-Kafka实战应用.md)** ✅ - Spring Boot 集成、业务场景、最佳实践
+
+**🎯 核心要点**
+
+- Kafka 高吞吐量、持久化存储的核心原理
+- Producer、Consumer、Consumer Group 的使用
+- Spring Boot 集成 Kafka 实战
+- 生产环境的最佳实践和故障排查
+
+**其他消息队列** 🔵 规划中
+
 - **RabbitMQ** - AMQP 协议、Exchange、Queue
 - **RocketMQ** - 事务消息、延时消息
 
@@ -338,9 +382,9 @@ Pod、Service、Deployment、ConfigMap、网络、存储、调度、高可用
 | 📈 维度 | 📊 数据 |
 |:---:|:---|
 | **知识模块** | 14 大类 70+ 小类 |
-| **已完成** | Java语言基础、Java集合框架、Java并发编程、认证授权、Nomad、博客搭建 |
+| **已完成** | Java语言基础、Java集合框架、Java并发编程、认证授权、Nomad、Kafka、博客搭建、Go语言系列 |
 | **进行中** | Spring、容器技术、云原生工具 |
-| **总文档** | 30+ 篇，持续增加中 |
+| **总文档** | 35+ 篇，持续增加中 |
 
 ---
 

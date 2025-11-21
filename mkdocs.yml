@@ -93,6 +93,29 @@ nav:
     - Nomad基础入门: cloud-native/01-Nomad基础入门.md
     - Nomad核心概念: cloud-native/02-Nomad核心概念.md
     - Nomad与Tailscale集成: cloud-native/07-Nomad与Tailscale集成.md
+  - 中间件技术:
+    - 概述: middleware/README.md
+    - Kafka基础入门: middleware/01-Kafka基础入门.md
+    - Kafka核心概念: middleware/02-Kafka核心概念.md
+    - Kafka实战应用: middleware/03-Kafka实战应用.md
+  - Go语言系列:
+    - 概述: go/README.md
+    - 快速入门: go/core/01-getting-started/README.md
+    - 基础语法:
+      - 变量与类型: go/core/02-basics/01-variables-types.md
+      - 流程控制: go/core/02-basics/02-control-flow.md
+      - 函数: go/core/02-basics/03-functions.md
+    - 进阶特性:
+      - 结构体与接口: go/core/03-intermediate/01-structs-interfaces.md
+      - 错误处理: go/core/03-intermediate/02-error-handling.md
+    - 高级并发:
+      - 并发编程: go/core/04-advanced/01-concurrency.md
+    - 实战应用:
+      - Web与数据库: go/core/05-practical/01-web-db.md
+    - 总结与对比:
+      - 最佳实践: go/summaries/best-practices.md
+      - Java vs Go: go/summaries/java-vs-go.md
+      - 学习资源: go/summaries/resources.md
 
 # Markdown 扩展
 markdown_extensions:

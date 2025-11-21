@@ -15,7 +15,6 @@
 
     <!-- 子模块 (Sub-modules) -->
     <modules>
-        <module>java-syntax-basics</module>
         <module>java-oop</module>
         <module>java-advanced</module>
         <module>java-functional</module>
@@ -28,10 +27,10 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>17</java.version>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        
+        <java.version>8</java.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+
         <!-- 依赖版本 (Dependency Versions) -->
         <junit.version>5.10.0</junit.version>
         <lombok.version>1.18.30</lombok.version>
