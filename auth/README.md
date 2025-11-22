@@ -119,14 +119,14 @@ public class UserController {
 
 ## 📚 文档
 
-完整文档请查看 [docs/](./docs/) 目录：
+完整文档请查看 [docs/](../docs/auth/design/) 目录：
 
-- [00-总体规划.md](./docs/00-总体规划.md) - 项目总体规划和架构设计
-- [01-项目规划.md](./docs/01-项目规划.md) - 详细的功能规划
-- [02-架构设计.md](./docs/02-架构设计.md) - 技术架构设计
-- [03-数据库设计.md](./docs/03-数据库设计.md) - 数据库表结构设计
-- [04-API接口文档.md](./docs/04-API接口文档.md) - API接口文档
-- [10-编码规范.md](./docs/10-编码规范.md) - 项目编码规范
+- [00-总体规划.md](../docs/auth/design/00-总体规划.md) - 项目总体规划和架构设计
+- [01-项目规划.md](../docs/auth/design/01-项目规划.md) - 详细的功能规划
+- [02-架构设计.md](../docs/auth/design/02-架构设计.md) - 技术架构设计
+- [03-数据库设计.md](../docs/auth/design/03-数据库设计.md) - 数据库表结构设计
+- [04-API接口文档.md](../docs/auth/design/04-API接口文档.md) - API接口文档
+- [10-编码规范.md](../docs/auth/design/10-编码规范.md) - 项目编码规范
 
 ## 💡 设计理念
 
@@ -200,10 +200,10 @@ public class UserController {
 - 🚀 开箱即用（引入一个依赖即可）
 
 **详细报告**:
-- [项目100%完成报告](./docs/PROJECT_100_COMPLETE.md)
-- [功能验证报告](./docs/FUNCTION_VERIFICATION.md)
+- [项目100%完成报告](../docs/auth/design/PROJECT_100_COMPLETE.md)
+- [功能验证报告](../docs/auth/design/FUNCTION_VERIFICATION.md)
 - [快速测试指南](./QUICK_TEST.md) ⭐
-- [API测试指南](./docs/API_TESTING_GUIDE.md)
+- [API测试指南](../docs/auth/design/API_TESTING_GUIDE.md)
 
 ## 🤝 贡献指南
 
