@@ -20,8 +20,8 @@
 | [01-Kafka基础入门](01-Kafka基础入门.md) | Kafka 简介、架构、安装部署、快速开始 | ✅ |
 | [02-Kafka核心概念](02-Kafka核心概念.md) | Topic、Partition、Producer、Consumer、Consumer Group | ✅ |
 | [03-Kafka实战应用](03-Kafka实战应用.md) | Java 客户端使用、Spring Boot 集成、生产实践 | ✅ |
-| [04-Kafka高可用与性能优化](04-Kafka高可用与性能优化.md) | 副本机制、ISR、性能调优、监控告警 | 🔵 规划中 |
-| [05-Kafka与其他消息队列对比](05-Kafka与其他消息队列对比.md) | Kafka vs RabbitMQ vs RocketMQ | 🔵 规划中 |
+| 04-Kafka高可用与性能优化 | 副本机制、ISR、性能调优、监控告警 | 🔵 规划中 |
+| 05-Kafka与其他消息队列对比 | Kafka vs RabbitMQ vs RocketMQ | 🔵 规划中 |
 
 ### 🔧 服务治理
 
