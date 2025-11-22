@@ -28,6 +28,7 @@ theme:
       toggle:
         icon: material/brightness-4
         name: 切换到浅色模式
+  custom_dir: overrides
   features:
     # 导航功能
     - navigation.tabs           # 顶部标签导航

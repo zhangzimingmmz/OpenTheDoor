@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  <link rel="manifest" href="{{ base_url }}/manifest.webmanifest" crossorigin="use-credentials">
+  {{ super() }}
+{% endblock %}
