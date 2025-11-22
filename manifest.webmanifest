@@ -1,0 +1,21 @@
+{
+    "name": "OpenTheDoor 技术知识库",
+    "short_name": "OpenTheDoor",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4051b5",
+    "description": "系统性学习与技能提升的技术知识库",
+    "icons": [
+        {
+            "src": "assets/images/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/images/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
