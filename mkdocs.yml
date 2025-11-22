@@ -68,6 +68,7 @@ nav:
   - 首页: index.md
   - Java核心技术:
     - 概述: java-core/README.md
+    - 项目指南: java-core/guide/getting-started.md
     - Java语法基础: java-core/01-Java语法基础.md
     - 面向对象编程: java-core/02-面向对象编程.md
     - Java高级特性: java-core/03-Java高级特性.md
@@ -85,6 +86,12 @@ nav:
     - SpringSecurity-OAuth2: auth/06-SpringSecurity-OAuth2.md
     - 代码示例集: auth/07-代码示例集.md
     - 高级主题与最佳实践: auth/08-高级主题与最佳实践.md
+    - 设计文档:
+      - 项目规划: auth/design/01-项目规划.md
+      - 架构设计: auth/design/02-架构设计.md
+      - 数据库设计: auth/design/03-数据库设计.md
+      - API接口文档: auth/design/04-API接口文档.md
+      - 部署运维: auth/design/05-部署运维.md
   - DevOps与工具:
     - 概述: devops/README.md
     - 博客搭建指南: devops/01-博客搭建指南.md
