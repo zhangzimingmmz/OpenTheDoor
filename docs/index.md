@@ -406,7 +406,7 @@ Pod、Service、Deployment、ConfigMap、网络、存储、调度、高可用
 **联系方式**
 
 - [:fontawesome-brands-github: GitHub](https://github.com/zhangzimingmmz)
-- [:material-web: 博客](https://zhangzimingmmz.github.io/OpenTheDoor/)
+- [:material-web: 博客](https://blog.zhangziming.cn/)
 
 ---
 
