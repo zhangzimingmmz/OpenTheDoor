@@ -2,314 +2,342 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://blog.zhangziming.cn/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/Java%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88-%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/drools-architecture/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/tags/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/01-%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83%E5%9F%BA%E7%A1%80/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/02-%E8%AE%A4%E8%AF%81%E5%8D%8F%E8%AE%AE%E4%B8%8E%E6%A0%87%E5%87%86/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/03-Java%E8%AE%A4%E8%AF%81%E6%A1%86%E6%9E%B6%E5%AF%B9%E6%AF%94/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/04-SpringSecurity%E6%A0%B8%E5%BF%83%E6%9E%B6%E6%9E%84/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/05-SpringSecurity%E5%AE%9E%E6%88%98%E9%85%8D%E7%BD%AE/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/06-SpringSecurity-OAuth2/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/07-%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B%E9%9B%86/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/08-%E9%AB%98%E7%BA%A7%E4%B8%BB%E9%A2%98%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/design/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/design/00-%E6%80%BB%E4%BD%93%E8%A7%84%E5%88%92/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/design/01-%E9%A1%B9%E7%9B%AE%E8%A7%84%E5%88%92/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/design/02-%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/design/03-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/design/04-API%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/design/05-%E9%83%A8%E7%BD%B2%E8%BF%90%E7%BB%B4/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/design/06-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/design/07-SDK%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/design/08-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/design/09-%E5%BC%80%E5%8F%91%E8%B7%AF%E7%BA%BF%E5%9B%BE/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/design/10-%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/auth/design/11-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/cloud-native/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/cloud-native/01-Nomad%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/cloud-native/02-Nomad%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/cloud-native/07-Nomad%E4%B8%8ETailscale%E9%9B%86%E6%88%90/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/devops/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/devops/01-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/core/01-getting-started/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/core/02-basics/01-variables-types/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/core/02-basics/02-control-flow/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/core/02-basics/03-functions/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/core/03-intermediate/01-structs-interfaces/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/core/03-intermediate/02-error-handling/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/core/04-advanced/01-concurrency/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/core/05-practical/01-web-db/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/examples/01-hello-world/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/examples/02-variables-types/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/examples/03-control-flow/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/examples/06-structs-interfaces/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/examples/08-error-handling/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/examples/09-packages/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/examples/10-file-io/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/examples/11-web-basics/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/examples/12-database/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/examples/13-rest-api/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/examples/14-final-project/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/summaries/best-practices/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/summaries/java-vs-go/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/go/summaries/resources/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/includes/abbreviations/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/java-core/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/java-core/01-Java%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/java-core/02-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/java-core/03-Java%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/java-core/04-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/java-core/05-Java%E6%96%B0%E7%89%88%E6%9C%AC%E7%89%B9%E6%80%A7/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/java-core/06-Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/java-core/07-01-%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/java-core/07-02-%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/java-core/07-03-%E9%94%81%E6%9C%BA%E5%88%B6/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/java-core/07-04-%E5%B9%B6%E5%8F%91%E5%B7%A5%E5%85%B7%E7%B1%BB/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/java-core/07-05-%E7%BA%BF%E7%A8%8B%E6%B1%A0/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/java-core/07-06-%E5%B9%B6%E5%8F%91%E9%9B%86%E5%90%88/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/java-core/07-07-%E5%8E%9F%E5%AD%90%E7%B1%BB%E4%B8%8ECAS/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/java-core/07-08-%E5%B9%B6%E5%8F%91%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/java-core/07-09-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/java-core/07-Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/java-core/guide/getting-started/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/middleware/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/middleware/01-Kafka%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/middleware/02-Kafka%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://blog.zhangziming.cn/middleware/03-Kafka%E5%AE%9E%E6%88%98%E5%BA%94%E7%94%A8/</loc>
-         <lastmod>2025-11-22</lastmod>
+         <lastmod>2026-01-09</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.zhangziming.cn/mysql-interview/</loc>
+         <lastmod>2026-01-09</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.zhangziming.cn/mysql-interview/01-locks/</loc>
+         <lastmod>2026-01-09</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.zhangziming.cn/mysql-interview/02-indexes/</loc>
+         <lastmod>2026-01-09</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.zhangziming.cn/mysql-interview/03-transactions/</loc>
+         <lastmod>2026-01-09</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.zhangziming.cn/mysql-interview/04-mvcc/</loc>
+         <lastmod>2026-01-09</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.zhangziming.cn/mysql-interview/05-logs/</loc>
+         <lastmod>2026-01-09</lastmod>
+    </url>
+    <url>
+         <loc>https://blog.zhangziming.cn/mysql-interview/06-architecture/</loc>
+         <lastmod>2026-01-09</lastmod>
     </url>
 </urlset>
