@@ -106,12 +106,12 @@ nav:
     - Kafka基础入门: middleware/01-Kafka基础入门.md
     - Kafka核心概念: middleware/02-Kafka核心概念.md
     - Kafka实战应用: middleware/03-Kafka实战应用.md
-  - MySQL面试通关宝典:
+  - MySQL技术:
     - 概述: mysql-interview/README.md
-    - 01.锁机制详解: mysql-interview/01-locks.md
-    - 02.索引底层与优化: mysql-interview/02-indexes.md
-    - 03.事务内核与隔离级别: mysql-interview/03-transactions.md
-    - 04.MVCC多版本并发控制: mysql-interview/04-mvcc.md
+    - 01.锁机制: mysql-interview/01-locks.md
+    - 02.索引原理: mysql-interview/02-indexes.md
+    - 03.事务与隔离级别: mysql-interview/03-transactions.md
+    - 04.MVCC机制: mysql-interview/04-mvcc.md
     - 05.日志系统: mysql-interview/05-logs.md
     - 06.架构设计: mysql-interview/06-architecture.md
   - Go语言系列:

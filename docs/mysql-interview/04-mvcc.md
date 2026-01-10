@@ -1,4 +1,4 @@
-# 4. [并发神器] MVCC 多版本并发控制
+# 4. MVCC机制
 
 MVCC (Multi-Version Concurrency Control) 是 InnoDB 实现高并发的核心技术。它使得读写操作互不阻塞：写操作加锁，读操作不加锁（读历史版本）。
 
